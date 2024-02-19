@@ -32,8 +32,16 @@ body {
 
 .row {
     display: flex;
+    width: 100%;
+    max-width: 100%;
     justify-content: space-around;
     margin: 20px 0;
+}
+
+.combined-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .column {
@@ -48,7 +56,7 @@ body {
 
 .half-column {
     background-color: #628A83;
-    border: 20px solid #FFFFFF;
+    border: 10px solid #FFFFFF;
     width: 434px;
     height: 145px;
 }
@@ -58,6 +66,17 @@ body {
     font-size: 60px;
     text-align: center;
     font-weight: bold;
+}
+
+.mini_column {
+    display: inline-block;
+    width: 434px;
+    height: 16px;
+    margin: 9px;
+    top: -42px;
+    text-align: center;
+    background-color: white;
+    color: #777B92;
 }
 
 .header {
@@ -85,13 +104,22 @@ body {
 }
 
 @media screen and (max-width: 1333px) {
-    .half-column{
+    .half-column {
         flex-direction: column;
         align-items: center;
     }
 
-    .container_bis{
+    .container_bis {
         flex-direction: column;
         align-items: center;
+    }
+
+    .combined-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 33%;
+        flex: 1;
     }
 }
