@@ -124,7 +124,7 @@ body {
     }
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 890px) {
 
     .half-column {
         flex-direction: column;
