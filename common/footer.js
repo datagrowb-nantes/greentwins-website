@@ -26,31 +26,34 @@ $(function () {
     bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Audit énergétique</a></li>';
     bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Bilan carbone</a></li>';
     bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Cartographie d\'énergie</a></li>';
-    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Subvention</a></li>';
     bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Financement des travaux</a></li>';
     bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Digitalisation</a></li>';
     bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Data & IA</a></li>';
     bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">ISO 51001</a></li>';
-    bar += '</ul>';
-    bar += '</div>';
-
-    bar += '<div class="col-lg-2 col-md-6 footer-links">';
-    bar += '<h4>Solutions</h4>';
-    bar += '<ul>';
-    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Énergie Management</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Management de l\'énergie</a></li>';
     bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Smart Grid Management</a></li>';
-    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Collecte et valorisation Data</a></li>';
-    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Digitalisation</a></li>';
     bar += '</ul>';
     bar += '</div>';
 
     bar += '<div class="col-lg-2 col-md-6 footer-links">';
-    bar += '<h4>Médias</h4>';
+    bar += '<h4>Technologies</h4>';
     bar += '<ul>';
-    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Blog</a></li>';
-    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Webinaire</a></li>';
-    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Vidéo</a></li>';
-    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Article</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Jumeaux numériques</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Internet of Things (IoT)</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Collecte et valorisation Data</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Plateforme SaaS</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Data</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Pilotage</a></li>';
+    bar += '</ul>';
+    bar += '</div>';
+
+    bar += '<div class="col-lg-2 col-md-6 footer-links">';
+    bar += '<h4>Domaines</h4>';
+    bar += '<ul>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Smart Building</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Méthanisation</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Énergies renouvelables</a></li>';
+    bar += '<li><i class="bx bx-chevron-right"></i> <a href="#">Agroalimentaire</a></li>';
     bar += '</ul>';
     bar += '</div>';
 
