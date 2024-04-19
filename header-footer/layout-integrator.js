@@ -9,7 +9,7 @@ class CustomHeader extends HTMLElement {
                 <div class="logo me-auto">
                     <!-- <h1><a href="index.html">Scaffold</a></h1>
                         Uncomment below if you prefer to use an image logo -->
-                    <a href="index.html"><img src="../assets/img/logo.png" alt="Logo de GreenTwins" class="img-fluid"></a>
+                    <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo de GreenTwins" class="img-fluid"></a>
                 </div>
         
                 <nav id="navbar" class="navbar order-last order-lg-0">
@@ -92,7 +92,7 @@ class CustomFooter extends HTMLElement {
         
                         <div class="col-lg-2 col-md-6">
                             <div class="footer-info">
-                                <a href="index1.html"><img src="../assets/img/logo-white.png" alt="Logo de GreenTwins" class="img-fluid"></a>
+                                <a href="../index.html"><img src="../assets/img/logo-white.png" alt="Logo de GreenTwins" class="img-fluid"></a>
         
                                 <div class="social-links mt-3">
                                     <a href="#" class="tv"><i class="bi bi-tv"></i></a>
