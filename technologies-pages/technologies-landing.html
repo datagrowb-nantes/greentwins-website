@@ -28,8 +28,11 @@
         <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
         <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        <!-- Template Main CSS File -->
+        <!-- CSS Stylesheet -->
         <link href="technologies-style.css" rel="stylesheet">
+
+        <!-- Header and Footer Layout integration -->
+        <script type="module" src="../header-footer/layout-integrator.js"></script>
 
         <!-- =======================================================
         * Template Name: Scaffold - v4.9.1
@@ -40,7 +43,8 @@
   </head>
 
     <body>
-        <!-- ADD CUSTOM HEADER-->
+        <!-- Custom Header tag -->
+        <custom-header></custom-header>
 
         <!-- ======= Hero Section ======= -->
         <section id="hero">
@@ -60,7 +64,7 @@
 
         <!-- ======= Technologies Links Section ======= -->
         <section id="links">
-            <div class="container text-center">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
 						<h1>Internet of Things (IoT)</h1>
@@ -75,7 +79,7 @@
                         <a href="technologies-jumeaux-numeriques.html" class="btn-primary" role="button">En savoir plus</a>
                     </div>
                     <div class="col-lg-6">
-						<h1>Platerforme SaaS</h1>
+						<h1>Plateforme SaaS</h1>
                         <a href="technologies-saas.html" class="btn-primary" role="button">En savoir plus</a>
 					</div>
                     <div class="col-lg-6">
@@ -84,7 +88,7 @@
 					</div>
                     <div class="col-lg-6">
 						<h1>Métier EE</h1>
-                        <a href="technologies-metiersEE.html" class="btn-primary" role="button">En savoir plus</a>
+                        <a href="technologies-metierEE.html" class="btn-primary" role="button">En savoir plus</a>
 					</div>
                 </div>
             </div>
@@ -208,7 +212,7 @@
             <!-- ======= Tryout Section ======= -->
             <section id="tryout">
                 <!-- Image a ajouter en background de la section sur le stylesheet -->
-                <div class="row text-center">
+                <div class="row text">
                     <h2>Demandez un essai de GreenTwins</h2>
                     <p>N’attendez plus pour commencer à économiser.</p>
                     <p>
@@ -223,5 +227,9 @@
     		<!-- End Tryout Section -->
 		</main>
         <!-- End main Section -->
+
+        <!-- Custom Footer tag-->
+        <custom-footer></custom-footer>
+
     </body>
 </html>
