@@ -502,7 +502,7 @@ nav ul li a.current-page {
     margin-bottom: 70px;
 }
 
-#kpi h2 {
+#kpi .col-lg-6 h2 {
     color: #262626;
     font-weight: 700;
 }
@@ -543,8 +543,9 @@ nav ul li a.current-page {
 
 .kpi-exp p {
     color: #eaeef7;
+    font-size: 16px;
     text-align: center;
-    max-width: 60%;
+    max-width: 50%;
 }
 /*--------------------------------------------------------------
 # Features Section
@@ -558,41 +559,63 @@ nav ul li a.current-page {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
-}
-
-#features h2 {
-    color: #262626;
-    font-size: 24px;
-    font-weight: 650;
-}
-
-#features p {
-    color: #777B92;
-    font-size: 16px;
+    text-align: center;
 }
 
 #features .row {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 
-#features .col-lg-3 {
-    margin-top: 15px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 25%;
-    padding-right: 20px;
+#features .icon-box {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    background: #fff;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    border-bottom: 3px solid #fff;
 }
 
-#features .col-lg-3 > img {
+#features .icon-box:hover {
+    transform: translateY(-5px);
+}
+
+#features .icon img {
     width: 25%;
     display: block;
     margin: 0 auto;
 }
+
+#features .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+#features .title a {
+    color: #364146;
+}
+
+#features .description {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 0;
+    color: #777B92;
+}
+
+#features .icon-box-green .icon i {
+    color: #71AC47;
+}
+
+#features .icon-box-green:hover {
+    border-color: #71AC47;
+}
+
 
 /*--------------------------------------------------------------
 # Tryout Section
