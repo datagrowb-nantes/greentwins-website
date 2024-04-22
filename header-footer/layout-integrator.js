@@ -31,7 +31,7 @@ class CustomHeader extends HTMLElement {
                             <ul>
                                 <li><a href="../technologies-pages/technologies-iot.html" class="nav-link scrollto">Internet of Things (IoT)</a></li>
                                 <li><a href="../technologies-pages/technologies-ia.html" class="nav-link scrollto">Module IA</a></li>
-                                <li><a href="../technologies-pages/technologies-jumeaux-numeriques.html" class="nav-link scrollto">Jumeaux numériques</a></li>
+                                <li><a href="../technologies-pages/technologies-digital-twins.html" class="nav-link scrollto">Jumeaux numériques</a></li>
                                 <li><a href="../technologies-pages/technologies-saas.html" class="nav-link scrollto">Plateforme SaaS</a></li>
                                 <li><a href="../technologies-pages/technologies-data.html" class="nav-link scrollto">Data</a></li>
                                 <li><a href="../technologies-pages/technologies-metierEE.html" class="nav-link scrollto">MétierEE</a></li>
@@ -123,7 +123,7 @@ class CustomFooter extends HTMLElement {
                             <ul>
                                 <li><i class="bx bx-chevron-right"></i> <a href="../technologies-pages/technologies-iot.html">Internet of Things (IoT)</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="../technologies-pages/technologies-ia.html">Module IA</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="../technologies-pages/technologies-jumeaux-numeriques.html">Jumeaux numériques</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../technologies-pages/technologies-digital-twins.html">Jumeaux numériques</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="../technologies-pages/technologies-saas.html">Plateforme SaaS</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="../technologies-pages/technologies-data.html">Data</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="../technologies-pages/technologies-metierEE.html">Métier EE</a></li>

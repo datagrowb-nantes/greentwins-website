@@ -442,6 +442,31 @@ nav ul li a.current-page {
 }
 
 /*--------------------------------------------------------------
+# AI Explanation
+--------------------------------------------------------------*/
+
+.carousel-indicators {
+    color: #71AC47;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    color: #71AC47;
+}
+
+#carousel-1 {
+    background-color: rgb(104, 0, 0);
+}
+
+#carousel-2 {
+    background-color: rgb(0, 0, 61);
+}
+
+/*Fixe la taille en hauteur du carousel, peu importe taille de l'element du carousel*/
+.carousel-inner {
+    height: 400px;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
