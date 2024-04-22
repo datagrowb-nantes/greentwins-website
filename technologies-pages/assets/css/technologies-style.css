@@ -12,6 +12,9 @@
 body {
     font-family: 'Kumbh Sans', sans-serif;
     color: #777B92;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 a {
@@ -41,6 +44,8 @@ h6 {
     color: white;
     text-decoration: none;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 .btn-primary:hover {
@@ -400,11 +405,94 @@ nav ul li a.current-page {
     margin-bottom: 70px;
 }
 
+#hero h1 {
+    font-size: 44px;
+    color: black;
+    font-weight: 700; 
+}
+
+#hero .p1 {
+    color: #777B92;
+    font-size: 20px;
+}
+
+#hero .p2 {
+    color: #777B92;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 /*--------------------------------------------------------------
 # Links Section
 --------------------------------------------------------------*/
 #links {
     margin-bottom: 70px;
+}
+
+#links h1 {
+    font-size: 44px;
+    color: black;
+    font-weight: 700; 
+}
+
+#links .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#links .col-lg-6 {
+    padding: 75px 0 75px 0;
+}
+
+#links .col-lg-6 > h1 {
+    text-align: left;
+    max-width: 50%;
+    float: left;
+    height: 70%;
+}
+
+#links .col-lg-6 > a {
+    display: block;
+    clear: both;
+    float: left;
+    width: 35%;
+    text-align: center;
+}
+
+#links .iot-link {
+    background-image: url(../img/thumbnail-iot.png);
+    background-size: 100% auto;
+    background-position: right center;
+}
+
+#links .ai-link {
+    background-image: url(../img/thumbnail-module-ia.png);
+    background-size: 100% auto;
+    background-position: right center;
+}
+
+#links .digital-twin-link {
+    background-image: url(../img/thumbnail-digital-twin.png);
+    background-size: 100% auto;
+    background-position: right center;
+}
+
+#links .saas-link {
+    background-image: url(../img/thumbnail-saas.png);
+    background-size: 100% auto;
+    background-position: right center;
+}
+
+#links .data-link {
+    background-image: url(../img/thumbnail-data.png);
+    background-size: 100% auto;
+    background-position: right center;
+}
+
+#links .metier-link {
+    background-image: url(../img/thumbnail-metier-ee.png);
+    background-size: 100% auto;
+    background-position: right center;
 }
 
 /*--------------------------------------------------------------
@@ -414,11 +502,96 @@ nav ul li a.current-page {
     margin-bottom: 70px;
 }
 
+#kpi h2 {
+    color: #262626;
+    font-weight: 700;
+}
+
+#kpi .p1 {
+    color: #777B92;
+    font-size: 16px;
+}
+
+#kpi .p2 {
+    color: #777B92;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#kpi .col-lg-6 > img {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+#kpi .col > img {
+    width: 100%;
+}
+
+.kpi-exp {
+    max-width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 50px 0 50px 0;
+    background-color: #71ac47;
+}
+
+.kpi-exp h2 {
+    color: white;
+    text-align: center;
+}
+
+.kpi-exp p {
+    color: #eaeef7;
+    text-align: center;
+    max-width: 60%;
+}
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
 #features {
     margin-bottom: 50px;
+}
+
+#features h1 {
+    color: #71AC47;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#features h2 {
+    color: #262626;
+    font-size: 24px;
+    font-weight: 650;
+}
+
+#features p {
+    color: #777B92;
+    font-size: 16px;
+}
+
+#features .row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#features .col-lg-3 {
+    margin-top: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 25%;
+    padding-right: 20px;
+}
+
+#features .col-lg-3 > img {
+    width: 25%;
+    display: block;
+    margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
@@ -427,13 +600,32 @@ nav ul li a.current-page {
 #tryout {
     padding: 10% 0;
     text-align: center;
+    background-image: url(../img/try-GT.jpg);
 }
 
 #tryout .text {
     padding: 0;
     text-align: center;
-    max-width: 65%;
     margin: 0 auto;
+}
+
+#tryout .text > h2 {
+    font-size: 36px;
+    color: #fff;
+}
+
+#tryout .p1 {
+    font-size: 22px;
+    color: #eaeef7;
+}
+
+#tryout .p2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #eaeef7;
+    max-width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 #tryout .btn-primary {
