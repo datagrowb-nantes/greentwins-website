@@ -119,7 +119,7 @@ class CustomFooter extends HTMLElement {
                         </div>
          
                         <div class="col-lg-2 col-md-6 footer-links">
-                            <h4>Technologies</h4>
+                            <h4><a href="../technologies-pages/technologies-landing.html">Technologies</a></h4>
                             <ul>
                                 <li><i class="bx bx-chevron-right"></i> <a href="../technologies-pages/technologies-iot.html">Internet of Things (IoT)</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="../technologies-pages/technologies-ia.html">Module IA</a></li>
