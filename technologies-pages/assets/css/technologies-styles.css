@@ -509,14 +509,14 @@ nav ul li a.current-page {
 ==============================================================*/
 /* ========== Sections General ========== */
 section {
-    padding: 60px 0;
+    padding: 40px 0;
     overflow: hidden;
     box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);;
 }
 
 /* ========== Hero Section ========== */
 #hero {
-	margin-top: 90px;
+	margin-top: 60px;
 }
 
 #hero h1 {
@@ -656,7 +656,7 @@ section {
 }
 
 /* ========== KPI Section ========== */
-#kpi .row {
+#kpi .container .row {
 	margin-bottom: 70px;
 	align-items: center;
 	
