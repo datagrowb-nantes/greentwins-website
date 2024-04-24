@@ -642,14 +642,15 @@ section {
     justify-content: space-between;
 }
 
-#links .col-lg-6 {
+#links .col-lg-5 {
     padding: 75px 45px;
-    margin: 0px 0;
+    margin: 10px 10px;
     box-shadow: 0 0px 29px 0 rgba(68, 88, 144, 0.3);
     background-color: white;
+    flex-grow: 1;
 }
 
-#links .col-lg-6 > h1 {
+#links .col-lg-5 > h1 {
 	color: #262626;
 	text-align: left;
     max-width: 50%;
@@ -657,7 +658,7 @@ section {
     height: 70%;
 }
 
-#links .col-lg-6 > a {
+#links .col-lg-5 > a {
     display: block;
     clear: both;
     float: left;
@@ -707,7 +708,6 @@ section {
 }
 
 #kpi .container .row {
-	margin-bottom: 70px;
 	align-items: center;
 }
 
@@ -732,6 +732,29 @@ section {
     width: 100%;
     max-width: 100%;
 }
+
+.horizontal-img {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical-img {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .horizontal-img {
+        display: none;
+    }
+
+    .vertical-img {
+        display: block;
+        margin-left: auto; 
+        margin-right: auto;
+    }
+}
+
 
 .kpi-exp {
     max-width: 100%;
