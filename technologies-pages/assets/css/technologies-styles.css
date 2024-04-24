@@ -839,3 +839,50 @@ section {
         width: 90%;
     }
 }
+
+/*==============================================================
+ ================== DIGITAL TWINS PAGE STYLES ==================
+==============================================================*/
+
+/* ========== DT Explanation Section ========== */
+#digital-twins-explanation {
+    padding: 0;
+    
+}
+
+#digital-twins-explanation .container {
+    display: contents;
+}
+
+#digital-twins-explanation h2 {
+    color: #fff;
+}
+
+#digital-twins-explanation p {
+    color: #eaeef7;
+}
+
+#digital-twins-explanation .description {
+    padding: 0 50px;
+}
+
+#digital-twins-explanation .first-row {
+    background-color: #628a83;
+    display: flex;
+    align-items: center;
+}
+
+#digital-twins-explanation .second-row {
+    background-color: #89a7a2;
+    display: flex;
+    align-items: center;
+}
+
+#digital-twins-explanation .illustration {
+    padding: 0 !important;
+}
+
+#digital-twins-explanation .illustration > img {
+    width: 100%;
+    height: auto;
+}
