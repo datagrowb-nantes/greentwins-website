@@ -574,7 +574,7 @@ section {
 #cards .col-md-4 {
     justify-content: center;
     box-sizing: border-box;
-    flex: 0 0 calc(33.33% - 40px);
+    flex: 0 0 calc(33.33% - 300px);
 }
 
 #cards .icon-box {
