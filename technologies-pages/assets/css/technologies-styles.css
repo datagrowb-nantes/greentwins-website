@@ -523,6 +523,71 @@ section {
 	color: #262626;
 }
 
+#hero .hexa-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+#hero .hexa-img > img {
+    max-width: 65%;
+    max-height: 100%;
+    display: block;
+}
+
+@media screen and (max-width: 1000px){
+    #hero .row {
+        flex-direction: column;
+    }
+
+    #hero .hero-title {
+        width: 60%;
+    }
+}
+
+.hero-digital-twins {
+    background-image: url(../img/thumbnail-digital-twin.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.hero-iot {
+    background-image: url(../img/thumbnail-iot.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.hero-ai-module {
+    background-image: url(../img/thumbnail-module-ia.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.hero-saas {
+    background-image: url(../img/thumbnail-saas.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.hero-data {
+    background-image: url(../img/thumbnail-data.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.hero-metier-ee {
+    background-image: url(../img/thumbnail-metier-ee.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
 /* ========== Tryout Section ========== */
 #tryout {
 	padding: 10% 0;
@@ -720,12 +785,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#kpi .col-lg-6 > img {
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
 }
 
 #kpi .col > img {
