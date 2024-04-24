@@ -528,6 +528,9 @@ section {
 	padding: 10% 0;
     text-align: center;
     background-image: url(../img/try-GT.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #tryout h2 {
