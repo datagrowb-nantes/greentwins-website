@@ -886,3 +886,42 @@ section {
     width: 100%;
     height: auto;
 }
+
+/*==============================================================
+ ================== IOT PAGE STYLES ==================
+==============================================================*/
+
+/* ========== IoT Explanation Section ========== */
+
+#iot {
+    padding: 0;
+}
+
+#iot .container {
+    display: contents;
+}
+
+#iot h2 {
+    color: #262626;
+}
+
+#iot .row {
+    background-color: #eaeef7;
+    display: flex;
+    align-items: center;
+}
+
+#iot .description {
+    padding: 40px 60px;
+    flex-grow: 1;
+}
+
+#iot .illustration {
+    padding: 0 !important;
+    flex-grow: 2;
+}
+
+#iot .illustration > img {
+    width: 100%;
+    height: auto;
+}
