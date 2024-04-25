@@ -34,6 +34,9 @@
         <!-- Header and Footer Layout integration -->
         <script type="module" src="../header-footer/layout-integrator.js"></script>
 
+        <!-- Special JS file for carousel height adjustement -->
+        <script type="module" src="assets/js/carouselHeight.js"></script>
+
         <!-- Bootstrap CDN Link -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha512-X8zN7XQ8XmK6LeKzrxJgy0KpTH1IIYN5JnYFuZxjrtcx4l/Y+Mtk+bYsCUekgcUNFqSdRVTv4vKDi5p3kfekvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -145,8 +148,8 @@
 
         <!-- ======= AI Explanation Section ======= -->
         <section id="ai-explanation">
-			<div class="container text-center">
-				<div class="row">
+			<div class="container">
+				<div class="row part-1">
 					<h1>
 						Module IA pour la méthanisation
 					</h1>
@@ -154,106 +157,105 @@
 						Le Module lA de GreenTwins pour la méthanisation offre une 
 						solution avancée pour optimiser la production de biogaz. 
 						En analysant en temps réel les données du processus de méthanisation, 
-						notre lA identifie les opportunités d optimisation, maximisant ainsi 
+						notre lA identifie les opportunités d'optimisation, maximisant ainsi 
 						le rendement et réduisant les temps d'arrêt.
 					</p>
 				</div>
-			</div>
-            <div id="carousel-1" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container">
-							<div class="col-lg-6">
-								<h2>Optimisation de la production de biogaz : maximisez votre rendement</h2>
-								<p>
-									Notre Module lA pour la méthanisation intègre des algorithmes 
-									avancés d'optimisation de la production de biogaz.
-								</p>
-								<p>
-									En analysant en temps réel les données du processus de méthanisation, 
-									notre lA identifie les conditions optimales pour maximiser le 
-									rendement du biogaz tout en minimisant les pertes.
-								</p>
-							</div>
-							<div class="col-lg-6">
-								<img src="" alt="Carousel item 1 Illustration">
-							</div>
-						</div>
+                <div id="carousel-1" class="carousel slide part-2">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-item">
-                        <div class="container">
-							<div class="col-lg-6">
-								<h2>
-									Optimisation de la consommation d'énergie et recette intelligente : 
-									améliorez votre efficience énergétique
-								</h2>
-								<p>
-									Grâce à notre Module IA, nous proposons également une optimisation 
-									de la consommation d'énergie dans le processus de méthanisation.
-								</p>
-								<p>
-									En utilisant des algorithmes d apprentissage automatique, notre lA 
-									ajuste dynamiquement la consommation d'énergie en fonction des 
-									besoins réels, réduisant ainsi les coûts et améliorant 
-									l'efficacité énergétique.
-								</p>
-								<p>
-									De plus, notre lA peut être utilisée pour développer des recettes 
-									intelligentes, en ajustant les paramètres du processus en temps 
-									réel pour garantir une production optimale de biogaz.
-								</p>
-							</div>
-							<div class="col-lg-6">
-								<img src="" alt="Carousel item 2 Illustration">
-							</div>
-						</div>
+                    <div id="adjustable-carousel" class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-5 description">
+                                        <h2>Optimisation de la production de biogaz : maximisez votre rendement</h2>
+                                        <p class="normal-regular">
+                                            Notre Module lA pour la méthanisation intègre des algorithmes 
+                                            avancés d'optimisation de la production de biogaz.
+                                        </p>
+                                        <p class="normal-regular">
+                                            En analysant en temps réel les données du processus de méthanisation, 
+                                            notre lA identifie les conditions optimales pour maximiser le 
+                                            rendement du biogaz tout en minimisant les pertes.
+                                        </p>
+                                    </div>
+                                    <div class="col-xl-5 illustration">
+                                        <img src="assets/img/module-ia/img-module-ia-methanisation-optimisation-production.jpg" alt="Carousel item 1 Illustration">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-5 description">
+                                        <h2>
+                                            Optimisation de la consommation d'énergie et recette intelligente : 
+                                            améliorez votre efficience énergétique
+                                        </h2>
+                                        <p class="normal-regular">
+                                            Grâce à notre Module IA, nous proposons également une optimisation 
+                                            de la consommation d'énergie dans le processus de méthanisation.
+                                            <br>
+                                            En utilisant des algorithmes d'apprentissage automatique, notre lA 
+                                            ajuste dynamiquement la consommation d'énergie en fonction des 
+                                            besoins réels, réduisant ainsi les coûts et améliorant 
+                                            l'efficacité énergétique.
+                                            <br>
+                                            De plus, notre lA peut être utilisée pour développer des recettes 
+                                            intelligentes, en ajustant les paramètres du processus en temps 
+                                            réel pour garantir une production optimale de biogaz.
+                                        </p>
+                                    </div>
+                                    <div class="col-xl-5 illustration">
+                                        <img src="assets/img/module-ia/img-module-ia-methanisation-optimisation-consommation.jpg" alt="Carousel item 2 Illustration">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-5 description">
+                                        <h2>
+                                            Gestion intelligente des stocks d'intrants : 
+                                            optimisez la gestion de vos ressources
+                                        </h2>
+                                        <p class="normal-regular">
+                                            Notre Module IA offre également une gestion 
+                                            intelligente des stocks d'intrants pour la méthanisation.
+                                        </p>
+                                        <p class="normal-regular">
+                                            En analysant les données historiques et en prédisant les 
+                                            besoins futurs, notre lA optimise la gestion des stocks 
+                                            d'intrants tels que les déchets organiques, garantissant 
+                                            un approvisionnement continu tout en minimisant les 
+                                            coûts de stockage.
+                                        </p>
+                                    </div>
+                                    <div class="col-xl-5 illustration">
+                                        <img src="assets/img/module-ia/img-module-ia-methanisation-gestion-intelligente.jpg" alt="Carousel item 3 Illustration">
+                                    </div>
+                                </div>
+                            </div>                    
+                        </div>
                     </div>
-                    <div class="carousel-item">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-6">
-									<h2>
-										Gestion intelligente des stocks d'intrants : 
-										optimisez la gestion de vos ressources
-									</h2>
-									<p>
-										Notre Module IA offre également une gestion 
-										intelligente des stocks d'intrants pour la méthanisation.
-									</p>
-									<p>
-										En analysant les données historiques et en prédisant les 
-										besoins futurs, notre lA optimise la gestion des stocks 
-										d'intrants tels que les déchets organiques, garantissant 
-										un approvisionnement continu tout en minimisant les 
-										coûts de stockage.
-									</p>
-								</div>
-								<div class="col-lg-6">
-									<img src="" alt="Carousel item 3 Illustration">
-								</div>
-							</div>
-						</div>                    
-					</div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-
-
-
-			  <div class="container text-center">
-				<div class="row">
+            </div>
+            <div class="container">
+				<div class="row part-3">
 					<h1>
 						Module IA pour le Smart Building
 					</h1>
@@ -268,7 +270,7 @@
 					</p>
 				</div>
 			</div>
-            <div id="carousel-2" class="carousel slide">
+            <div id="carousel-2" class="carousel slide part-4">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -276,43 +278,53 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="container">
-							<div class="col-lg-6">
-								<img src="" alt="Carousel item 1 Illustration">
-							</div>
-							<div class="col-lg-6">
-								<h2>Optimisation opérationnelle et énergétique : prédisez et optimisez</h2>
-								<p>
-									Dans le domaine des bâtiments intelligents, notre Module IA propose 
-									des algorithmes avancés pour optimiser à la fois les opérations et 
-									la consommation d'énergie.
-								</p>
-								<p>
-									En analysant les données de capteurs et en utilisant des techniques 
-									d'apprentissage automatique, notre lA prédit l'occupation des espaces, 
-									surveille l'environnement intérieur et prédit la qualité de l'air, 
-									permettant ainsi une gestion proactive pour garantir le confort des 
-									occupants et réduire la consommation d'énergie.
-								</p>
-							</div>
+                            <div class="row">
+                                <div class="col-xl-5 illustration">
+                                    <img src="assets/img/module-ia/img-module-ia-smart-building-optimisation-operationnelle.jpg" alt="Carousel item 1 Illustration">
+                                </div>
+                                <div class="col-xl-5 description">
+                                    <h2>Optimisation opérationnelle et énergétique : prédisez et optimisez</h2>
+                                    <p>
+                                        Dans le domaine des bâtiments intelligents, notre Module IA propose 
+                                        des algorithmes avancés pour optimiser à la fois les opérations et 
+                                        la consommation d'énergie.
+                                    </p>
+                                    <p>
+                                        En analysant les données de capteurs et en utilisant des techniques 
+                                        d'apprentissage automatique, notre lA prédit l'occupation des espaces, 
+                                        surveille l'environnement intérieur et prédit la qualité de l'air, 
+                                        permettant ainsi une gestion proactive pour garantir le confort des 
+                                        occupants et réduire la consommation d'énergie.
+                                    </p>
+                                </div>
+                            </div>
 						</div>
                     </div>
                     <div class="carousel-item">
                         <div class="container">
-							<div class="col-lg-6">
-								<img src="" alt="Carousel item 2 Illustration">
-							</div>
-							<div class="col-lg-6">
-								<h2>Optimisation de la production de biogaz : maximisez votre rendement</h2>
-								<p>
-									Notre Module lA pour la méthanisation intègre des algorithmes 
-									avancés d'optimisation de la production de biogaz.
-								</p>
-								<p>
-									En analysant en temps réel les données du processus de méthanisation, 
-									notre lA identifie les conditions optimales pour maximiser le 
-									rendement du biogaz tout en minimisant les pertes.
-								</p>
-							</div>
+                            <div class="row">
+                                <div class="col-xl-5 illustration">
+                                    <img src="assets/img/module-ia/img-module-ia-smart-building-optimisation-consommation.jpg" alt="Carousel item 2 Illustration">
+                                </div>
+                                <div class="col-xl-5 description">
+                                    <h2>
+                                        Optimisation de la consommation d'énergie et recette 
+                                        Intelligente : améliorez votre efficience énergétique
+                                    </h2>
+                                    <p>
+                                        Notre Module lA pour les bâtiments intelligents offre 
+                                        également une optimisation de la consommation d'énergie.
+                                    </p>
+                                    <p>
+                                        En analysant les schémas de consommation historiques et 
+                                        en prédisant les demandes futures, notre lA ajuste 
+                                        dynamiquement les systèmes de chauffage, de ventilation 
+                                        et de climatisation pour minimiser la consommation 
+                                        d'énergie tout en maintenant des conditions de confort 
+                                        optimales.
+                                    </p>
+                                </div>
+                            </div>
 						</div>
                     </div>
                 </div>
@@ -324,7 +336,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
         </section>
 		<!-- End AI Explanation Section -->
 
