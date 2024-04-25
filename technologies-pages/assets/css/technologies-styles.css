@@ -634,6 +634,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 #cards .col-md-4 {
@@ -687,7 +688,7 @@ section {
 #cards .icon img {
     width: 50px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
 }
 
 /* ========== Carousel Section Template ========== */
