@@ -140,7 +140,7 @@ Par exemple, si on est dans l'une des pages de la section technologies, la coule
 
 C'est facile à faire quand on a une navbar stockée dans chaque page HTML, mais quand on a une Navbar commune à toutes les pages, beaucoup moins.
 
-Cepedant, JavaScript peut nous offrir une solution à ce problème :
+Cependant, JavaScript peut nous offrir une solution à ce problème :
 Il faut associer une classe spécifique au lien de la page Technologies et préciser en CSS la couleur du texte qui possède cette classe.
 Dans la méthode `connectedCallBack()`, on va définir la constante suivante : `const currentPage = window.location.pathname;`. Cette constante va stocker le chemin actuel de la page courante, en incluant le nom du fichier.
 
@@ -152,4 +152,7 @@ Si la condition `a` est vérifiée, alors on donne la classe `b` à notre objet,
 Dans notre expression de base, `a` équivaut à la vérification que la chaîne de caractères `'technologies-'` est présente dans la constante `currentPage`. Si oui, on donne à notre élément la classe `current-page` qui sera stylée en CSS, et sinon on ne lui donne aucune classe.  
 
 ____
-#### 
+#### Style CSS
+
+Pour ce qui est de la mise en page des styles CSS de nos pages Technologies, il valait mieux faire un stylesheet différent de celui de la landing page, en partant de 0 pour ne pas garder les effets inutiles de celui du template **Scaffold**.
+Mais comme les pages technologies ont elles-mêmes beaucoup de designs smilaires, les 7 pages ont un fichier commun : `technologies-styles.css`.
