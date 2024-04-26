@@ -712,7 +712,88 @@ section {
     border-radius: 100%;
     background-color: rgb(255, 255, 255) !important;
 }
-/* ========== Carousel 1 AI Page ========== */
+/* ========== Carousel Data Page ========== */
+
+#data-explanation {
+    padding: 0;
+}
+
+#data-explanation .container {
+    display: contents;
+}
+
+#data-explanation .row {
+    background-color: #628a83;
+    display: flex;
+    align-items: center;
+}
+
+#data-explanation h2 {
+    color: #fff;
+}
+
+#data-explanation p {
+    color: #eaeef7;
+}
+
+#data-explanation .description {
+    padding: 50px 100px;
+}
+
+#data-explanation .illustration {
+    padding: 0 !important;
+}
+
+#data-explanation .illustration {
+    padding: 0 !important;
+}
+
+#data-explanation .illustration > img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    #data-explanation .carousel-control-prev {
+        height: 200px;
+        width: 100px;
+    }
+
+    #data-explanation .carousel-control-next {
+        height: 200px;
+        width: 100px;    
+    }
+
+    #data-explanation .carousel-indicators {
+        top: 2%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #data-explanation .carousel-indicators {
+        top: 85%;
+        left: 14.5%;
+        margin: 0;
+        width: 10%;
+        height: 80px;
+    }
+
+    #data-explanation .carousel-control-prev {
+        width: 80px;
+        height: 80px;
+        left: 12.5%;
+        top: 80.5%;
+    }
+
+    #data-explanation .carousel-control-next {
+        width: 80px;
+        height: 80px;
+        left: 21%;
+        top: 80.5%;
+    }    
+}
+
+/* ========== Carousels AI Page ========== */
 #ai-explanation {
     padding: 0;
 }
@@ -1025,6 +1106,16 @@ section {
 #digital-twins-explanation .illustration > img {
     width: 100%;
     height: auto;
+}
+
+@media screen and (max-width:1200px) {
+    #digital-twins-explanation .second-row .description {
+        order: 2;
+    }
+
+    #digital-twins-explanation .second-row .illustration {
+        order: 1;
+    }
 }
 
 /*==============================================================

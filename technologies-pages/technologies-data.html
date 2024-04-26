@@ -31,6 +31,9 @@
         <!-- CSS Stylesheet -->
         <link href="assets/css/technologies-styles.css" rel="stylesheet">
 
+        <!-- Special JS file for carousel height adjustement -->
+        <script type="module" src="assets/js/carouselHeight.js"></script>
+
         <!-- Tryout Section, Header and Footer Layout integration -->
         <script type="module" src="../header-footer/layoutIntegrator.js"></script>
         <script type="module" src="assets/js/tryoutSectionIntegrator.js"></script>
@@ -91,119 +94,126 @@
                     <button type="button" data-bs-target="#carousel-3" data-bs-slide-to="3" aria-label="Slide 4"></button>
                     <button type="button" data-bs-target="#carousel-3" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
-                <div class="carousel-inner">
-
-                    <!-- Slide 1 -->
+                <div id="adjustable-carousel" class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="container">
-							<div class="col-lg-4">
-								<h2>
-                                    Stockage des données
-                                </h2>
-								<p>
-									Notre brique Data offre un stockage sécurisé
-                                    et évolutif pour toutes vos données, garantissant
-                                    leur disponibilité et leur intégrité à tout moment.
-								</p>
-							</div>
-							<div class="col-lg-8">
-								<img src="" alt="Carousel item 1 Illustration">
-							</div>
-						</div>
-                    </div>
 
-                    <!-- Slide 2 -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-5 description" data-aos="zoom-in">
+                                    <h2>
+                                        Stockage des données
+                                    </h2>
+                                    <p class="normal-regular">
+                                        Notre brique Data offre un stockage sécurisé
+                                        et évolutif pour toutes vos données, garantissant
+                                        leur disponibilité et leur intégrité à tout moment.
+                                    </p>
+                                </div>
+                                <div class="col-xl-7 illustration" data-aos="fade-left">
+                                    <img src="assets/img/data/img-data-storage.jpg" alt="Illustration Data Storage">
+                                </div>
+                            </div>
+                        </div> 
+
+                    </div>
+                    
                     <div class="carousel-item">
                         <div class="container">
-							<div class="col-lg-4">
-								<h2>
-									Source de données
-								</h2>
-								<p>
-                                    Elle centralise et gère toutes les sources de données, 
-                                    qu'elles proviennent de capteurs loT, de systèmes internes 
-                                    ou de sources externes, offrant ainsi une vue unifiée et 
-                                    cohérente de l'ensemble de vos données.
-								</p>
-							</div>
-							<div class="col-lg-8">
-								<img src="" alt="Carousel item 2 Illustration">
-							</div>
-						</div>
+                            <div class="row">
+                                <div class="col-xl-5 description" data-aos="zoom-in">
+                                    <h2>
+                                        Source de données
+                                    </h2>
+                                    <p class="normal-regular">
+                                        Elle centralise et gère toutes les sources de données, 
+                                        qu'elles proviennent de capteurs loT, de systèmes internes 
+                                        ou de sources externes, offrant ainsi une vue unifiée et 
+                                        cohérente de l'ensemble de vos données.
+                                    </p>
+                                </div>
+                                <div class="col-xl-7 illustration" data-aos="fade-left">
+                                    <img src="assets/img/data/img-data-source.jpg" alt="Illustration Data Source">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Slide 3 -->
+                    
                     <div class="carousel-item">
                         <div class="container">
-							<div class="col-lg-4">
-								<h2>
-                                    Dictionnaire de données
-								</h2>
-								<p>
-                                    Le dictionnaire des données de GreenTwins fournit une 
-                                    documentation complète et structurée de toutes vos 
-                                    données, facilitant ainsi la compréhension et 
-                                    l'utilisation de celles-ci par l'ensemble de votre
-                                    organisation.
-								</p>
-							</div>
-							<div class="col-lg-8">
-								<img src="" alt="Carousel item 3 Illustration">
-							</div>
-						</div>
+                            <div class="row">
+                                <div class="col-xl-5 description" data-aos="zoom-in">
+                                    <h2>
+                                        Dictionnaire de données
+                                    </h2>
+                                    <p class="normal-regular">
+                                        Le dictionnaire des données de GreenTwins fournit 
+                                        une documentation complète et structurée de toutes 
+                                        vos données, facilitant ainsi la compréhension et 
+                                        l'utilisation de celles-ci par l'ensemble de votre 
+                                        organisation.
+                                    </p>
+                                </div>
+                                <div class="col-xl-7 illustration" data-aos="fade-left">
+                                    <img src="assets/img/data/img-data-dictionnary.jpg" alt="Illustration Data Dictionnary">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Slide 4 -->
+                    
                     <div class="carousel-item">
                         <div class="container">
-							<div class="col-lg-4">
-								<h2>
-                                    Qualité des données
-								</h2>
-								<p>
-                                    Nous mettons l'accent sur la gualité des données, en 
-                                    utilisant des outils avancés pour assurer la précision, la 
-                                    cohérence et la fiabilité de vos données, garantissant 
-                                    ainsi des analyses et des décisions basées sur des données 
-                                    de haute qualité.
-								</p>
-							</div>
-							<div class="col-lg-8">
-								<img src="" alt="Carousel item 4 Illustration">
-							</div>
-						</div>
+                            <div class="row">
+                                <div class="col-xl-5 description" data-aos="zoom-in">
+                                    <h2>
+                                        Qualité des données
+                                    </h2>
+                                    <p class="normal-regular">
+                                        Nous mettons l'accent sur la gualité des données, en 
+                                        utilisant des outils avancés pour assurer la précision, 
+                                        la cohérence et la fiabilité de vos données, garantissant 
+                                        ainsi des analyses et des décisions basées sur des 
+                                        données de haute qualité.
+                                    </p>
+                                </div>
+                                <div class="col-xl-7 illustration" data-aos="fade-left">
+                                    <img src="assets/img/data/img-data-quality.jpg" alt="Illustration Data Quality">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Slide 5 -->
                     <div class="carousel-item">
                         <div class="container">
-							<div class="col-lg-4">
-								<h2>
-                                    Alertes de données
-								</h2>
-								<p>
-                                    Notre brique Data est équipée de fonctionnalités d'alerte 
-                                    avancées qui vous avertissent en temps réel des anomalies ou 
-                                    des événements importants dans vos données, vous permettant 
-                                    ainsi de réagir rapidement et efficacement aux changements.
-								</p>
-							</div>
-							<div class="col-lg-8">
-								<img src="" alt="Carousel item 5 Illustration">
-							</div>
-						</div>
+                            <div class="row">
+                                <div class="col-xl-5 description" data-aos="zoom-in">
+                                    <h2>
+                                        Alertes de données
+                                    </h2>
+                                    <p class="normal-regular">
+                                        Notre brique Data est équipée de fonctionnalités 
+                                        d'alerte avancées qui vous avertissent en temps 
+                                        réel des anomalies ou des événements importants 
+                                        dans vos données, vous permettant ainsi de réagir 
+                                        rapidement et efficacement aux changements.
+                                    </p>
+                                </div>
+                                <div class="col-xl-7 illustration" data-aos="fade-left">
+                                    <img src="assets/img/data/img-data-alerts.jpg" alt="Illustration Data Alerts">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
+                
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carousel-3" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
         </section>
         <!-- End Data Explanation Section-->
 

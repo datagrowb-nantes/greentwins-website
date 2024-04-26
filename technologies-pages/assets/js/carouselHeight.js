@@ -1,5 +1,5 @@
-// Script qui permet de fixer la hauteur du carousel 1 de la page IA 
-// à la hauteur de la slide la plus haute
+// Script qui permet de fixer la hauteur d'un carousel 
+// à la hauteur de sa slide la plus haute
 
 // Deux events listeners pour appeler la fonction au chargement de 
 // la page, et à chaque fois que la fenêtre est resize
@@ -30,6 +30,6 @@ function adjustCarouselHeight() {
         }
     });
 
-    // Application de la hauteur maximale au carousel
+    // Application de la hauteur maximale au carousel dont l'id doit être spécifié
     document.getElementById('adjustable-carousel').style.height = maxHeight + 'px';
 }
