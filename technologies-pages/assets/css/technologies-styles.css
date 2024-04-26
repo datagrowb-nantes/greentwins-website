@@ -634,7 +634,18 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 50px;
+}
+
+@media screen and (min-width: 1000px) {
+    #cards .row {
+        padding-bottom: 50px;
+    }    
+}
+
+@media screen and (max-width: 1000px) {
+    #cards .normal-regular {
+        padding-bottom: 50px;
+    }
 }
 
 #cards .col-md-4 {
