@@ -713,7 +713,6 @@ section {
     background-color: rgb(255, 255, 255) !important;
 }
 /* ========== Carousel Data Page ========== */
-
 #data-explanation {
     padding: 0;
 }
@@ -1119,7 +1118,7 @@ section {
 }
 
 /*==============================================================
- ================== IOT PAGE STYLES ==================
+ ======================= IOT PAGE STYLES =======================
 ==============================================================*/
 
 /* ========== IoT Explanation Section ========== */
@@ -1155,4 +1154,45 @@ section {
 #iot .illustration > img {
     width: 100%;
     height: auto;
+}
+
+/*==============================================================
+===================== MetierEE PAGE STYLES =====================
+==============================================================*/
+
+/* ========== EE Explanation Section ========== */
+#ee-explanation {
+    padding: 0;
+}
+
+#ee-explanation .container {
+    display: contents;
+}
+
+#ee-explanation h1 {
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+#ee-explanation h2 {
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+#ee-explanation p {
+    color: #eaeef7;
+}
+
+#ee-explanation .first-row {
+    text-align: center;
+    padding: 20px 15%;
+    background-color: #628a83;
+}
+
+#ee-explanation .second-row {
+    background-color: #89a7a2;
+}
+
+#ee-explanation .col {
+    padding: 5% 20%;
 }
