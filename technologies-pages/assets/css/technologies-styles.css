@@ -735,10 +735,6 @@ section {
     color: #eaeef7;
 }
 
-#data-explanation .description {
-    padding: 50px 100px;
-}
-
 #data-explanation .illustration {
     padding: 0 !important;
 }
@@ -753,18 +749,30 @@ section {
 }
 
 @media screen and (max-width: 1200px) {
+    #data-explanation .carousel-indicators {
+        top: 2%;
+    }  
+
+    #data-explanation .description {
+        padding: 50px 20% 50px 20%;
+    }
+
     #data-explanation .carousel-control-prev {
-        height: 200px;
-        width: 100px;
+        width: 60px;
+        height: 60px;
+        background-color: #2626263E;
+        border-radius: 50%;
+        left: 5%;
+        top: calc(12.5% - 25px);
     }
 
     #data-explanation .carousel-control-next {
-        height: 200px;
-        width: 100px;    
-    }
-
-    #data-explanation .carousel-indicators {
-        top: 2%;
+        width: 60px;
+        height: 60px;
+        background-color: #2626263E;
+        border-radius: 50%;
+        right: 5%;
+        top: calc(12.5% - 25px);
     }
 }
 
@@ -775,21 +783,29 @@ section {
         margin: 0;
         width: 10%;
         height: 80px;
+    }  
+
+    #data-explanation .description {
+        padding: 50px 7.5% 50px 12.5%;
     }
 
     #data-explanation .carousel-control-prev {
-        width: 80px;
-        height: 80px;
-        left: 12.5%;
-        top: 80.5%;
+        width: 60px;
+        height: 60px;
+        background-color: #2626263E;
+        border-radius: 50%;
+        left: 5%;
+        top: calc(50% - 25px);
     }
 
     #data-explanation .carousel-control-next {
-        width: 80px;
-        height: 80px;
-        left: 21%;
-        top: 80.5%;
-    }    
+        width: 60px;
+        height: 60px;
+        background-color: #2626263E;
+        border-radius: 50%;
+        right: 5%;
+        top: calc(50% - 25px);
+    }
 }
 
 /* ========== Carousels AI Page ========== */
@@ -834,6 +850,24 @@ section {
     align-items: center;
 }
 
+#ai-explanation .carousel-control-prev {
+    width: 60px;
+    height: 60px;
+    background-color: #2626263E;
+    border-radius: 50%;
+    left: 5%;
+    top: calc(50% - 25px);
+}
+
+#ai-explanation .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background-color: #2626263E;
+    border-radius: 50%;
+    right: 5%;
+    top: calc(50% - 25px);
+}
+
 @media screen and (max-width: 1199px){
     #ai-explanation .part-2 .row {
         height: auto;
@@ -848,8 +882,21 @@ section {
         order: 2;
     }
 
+    #ai-explanation .part-2 .description, #ai-explanation .part-4 .description {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    
     #ai-explanation .part-2 .illustration {
         order: 1;
+    }
+
+    #ai-explanation .carousel-control-prev {
+        top: calc(85% - 25px) !important;
+    }
+
+    #ai-explanation .carousel-control-next {
+        top: calc(85% - 25px) !important;
     }
 }
 
