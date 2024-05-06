@@ -31,5 +31,6 @@ function adjustCarouselHeight() {
     });
 
     // Application de la hauteur maximale au carousel dont l'id doit être spécifié
+    maxHeight *= 1.1;
     document.getElementById('adjustable-carousel').style.height = maxHeight + 'px';
 }

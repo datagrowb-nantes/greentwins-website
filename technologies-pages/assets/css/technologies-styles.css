@@ -667,6 +667,14 @@ section {
     box-sizing: border-box;
 }
 
+@media screen and (max-width: 540px){
+    #cards .icon-box {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+}
+
 @media screen and (max-width: 1000px){
     #cards .col-md-4 {
         flex: 0 0 calc(100% - 40px);
@@ -758,21 +766,21 @@ section {
     }
 
     #data-explanation .carousel-control-prev {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         background-color: #2626263E;
         border-radius: 50%;
-        left: 5%;
-        top: calc(12.5% - 25px);
+        left: 4.5%;
+        top: calc(25% - 25px);
     }
 
     #data-explanation .carousel-control-next {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         background-color: #2626263E;
         border-radius: 50%;
-        right: 5%;
-        top: calc(12.5% - 25px);
+        right: 4.5%;
+        top: calc(25% - 25px);
     }
 }
 
@@ -880,6 +888,7 @@ section {
 
     #ai-explanation .part-2 .description {
         order: 2;
+        padding-top: 30px;
     }
 
     #ai-explanation .part-2 .description, #ai-explanation .part-4 .description {
@@ -892,11 +901,11 @@ section {
     }
 
     #ai-explanation .carousel-control-prev {
-        top: calc(85% - 25px) !important;
+        top: calc(95% - 25px) !important;
     }
 
     #ai-explanation .carousel-control-next {
-        top: calc(85% - 25px) !important;
+        top: calc(95% - 25px) !important;
     }
 }
 
@@ -990,6 +999,18 @@ section {
     height: 70%;
 }
 
+@media screen and (max-width: 490px) {
+    #links .col-lg-5 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #links .col-lg-5 > h1 {
+        max-width: 100%;
+    }
+}
+
 #links .col-lg-5 > a {
     display: block;
     clear: both;
@@ -1001,36 +1022,42 @@ section {
     background-image: url(../img/thumbnail-iot.png);
     background-size: 100% auto;
     background-position: right center;
+    background-repeat: no-repeat;
 }
 
 #links .ai-link {
     background-image: url(../img/thumbnail-module-ia.png);
     background-size: 100% auto;
     background-position: right center;
+    background-repeat: no-repeat;
 }
 
 #links .digital-twin-link {
     background-image: url(../img/thumbnail-digital-twin.png);
     background-size: 100% auto;
     background-position: right center;
+    background-repeat: no-repeat;
 }
 
 #links .saas-link {
     background-image: url(../img/thumbnail-saas.png);
     background-size: 100% auto;
     background-position: right center;
+    background-repeat: no-repeat;
 }
 
 #links .data-link {
     background-image: url(../img/thumbnail-data.png);
     background-size: 100% auto;
     background-position: right center;
+    background-repeat: no-repeat;
 }
 
 #links .metier-link {
     background-image: url(../img/thumbnail-metier-ee.png);
     background-size: 100% auto;
     background-position: right center;
+    background-repeat: no-repeat;
 }
 
 /* ========== KPI Section ========== */
@@ -1058,6 +1085,22 @@ section {
     width: 100%;
     max-width: 100%;
 }
+@media screen and (max-width: 600px) {
+    #kpi .description {
+        display: contents;
+    }
+
+    #kpi .description h2, #kpi .description p {
+        margin: auto 5%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #kpi .col-lg-6 img {
+        width: 80%;
+        max-width: calc(100% - 15%);
+    }
+}
 
 .horizontal-img {
     display: block; 
@@ -1080,7 +1123,6 @@ section {
         margin-right: auto;
     }
 }
-
 
 .kpi-exp {
     max-width: 100%;
@@ -1242,4 +1284,15 @@ section {
 
 #ee-explanation .col {
     padding: 5% 20%;
+}
+
+@media screen and (max-width: 600px) {
+    #ee-explanation .first-row {
+        text-align: left;
+        padding: 20px 5%;
+    }
+
+    #ee-explanation .col {
+        padding: 10% 15%;
+    }
 }
