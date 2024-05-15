@@ -31,6 +31,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Header and Footer Layout integration -->
+  <script type="module" src="header-footer/layoutIntegrator.js"></script>
+
   <!-- =======================================================
   * Template Name: Scaffold - v4.9.1
   * Template URL: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/
@@ -41,14 +44,8 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="back-end/email.js"></script>
-
-  <div id="nav_bar_info">
-    <script src="common/nav_bar.js"></script>
-  </div>
-  <!-- End Header -->
+  <!-- Custom Header tag -->
+ 	<custom-header></custom-header>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -414,35 +411,34 @@
               </div>
 
               <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-left">
-                <form id="contact-form" class="php-email-form">
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="name">Nom et prénom</label>
-                            <input type="text" name="name" class="form-control" id="name" required>
-                        </div>
-                        <div class="form-group col-md-6 mt-3 mt-md-0">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email" id="email" required>
-                        </div>
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <label for="name">Nom et prénom</label>
+                      <input type="text" name="name" class="form-control" id="name" required>
                     </div>
-                    <div class="form-group mt-3">
-                        <label for="subject">Sujet</label>
-                        <input type="text" class="form-control" name="subject" id="subject" required>
+                    <div class="form-group col-md-6 mt-3 mt-md-0">
+                      <label for="name">Email</label>
+                      <input type="email" class="form-control" name="email" id="email" required>
                     </div>
-                    <div class="form-group mt-3">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
-                    </div>
-                    <p>Notre équipe vous apportera une réponse dans les plus brefs délais.</p>
-                    <div class="my-3">
-                        <div class="loading">Chargement</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Merci, votre message a été correctement envoyé.</div>
-                    </div>
-                    <button type="button" onclick="sendEmail()" class="btn-get-started">Envoyer</button>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="name">Sujet</label>
+                    <input type="text" class="form-control" name="subject" id="subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="name">Message</label>
+                    <textarea class="form-control" name="message" rows="10" required></textarea>
+                  </div>
+                  <p>Notre équipe vous apportera une réponse dans les plus brefs délais.</p>
+                  <div class="my-3">
+                    <div class="loading">Chargement</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Merci, votre message a été correctement envoyé.</div>
+                  </div>
+                  <a href="#about" class="btn-get-started">Envoyer</a>
                 </form>
-            </div>
-            
+              </div>
 
             </div>
 
@@ -451,11 +447,8 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <div id="footer_info">
-    <script src="common/footer.js"></script>
-  </div>
-  <!-- End Footer -->
+	<!-- Custom Footer tag-->
+	<custom-footer></custom-footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
