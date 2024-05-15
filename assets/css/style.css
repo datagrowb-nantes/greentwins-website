@@ -132,7 +132,7 @@ h6 {
 }
 
 .header-social-links a {
-  color: #364146;
+  color: #262626;
   display: inline-block;
   line-height: 0px;
   transition: 0.3s;
@@ -173,7 +173,7 @@ h6 {
   padding: 10px 0 10px 30px;
   font-size: 15px;
   font-family: "Kumbh Sans", sans-serif;
-  color: #364146;
+  color: #262626;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -259,14 +259,14 @@ h6 {
 .nav-item h2, 
 .icon-box h4 {
   font-weight: 700;
-  color: #364146;
+  color: #262626;
 }
 
 /**
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #364146;
+  color: #262626;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -323,7 +323,7 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #364146;
+  color: #262626;
 }
 
 .navbar-mobile a:hover,
@@ -389,7 +389,7 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #364146;
+  color: #262626;
 }
 
 #hero h2 {
@@ -414,7 +414,7 @@ h6 {
 
 .btn-get-started:hover {
   background: white;
-  color:#364146;
+  color:#262626;
   border: 2px solid #71AC47;
 }
 
@@ -467,7 +467,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 0;
   font-family: "Kumbh Sans", sans-serif;
-  color: #364146;
+  color: #262626;
 }
 
 .section-title p {
@@ -516,7 +516,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 32px;
-  color: #364146;
+  color: #262626;
   font-family: "Kumbh Sans", sans-serif;
 }
 
@@ -554,7 +554,7 @@ section {
   border: 0;
   padding: 20px;
   transition: 0.3s;
-  color: #364146;
+  color: #262626;
   transition: 0.3s ease-in-out;
   border-radius: 0;
   border-left: 4px solid #fafbfb;
@@ -577,7 +577,7 @@ section {
 }
 
 .features .nav-link:hover h4 {
-  color: #364146;
+  color: #262626;
 }
 
 .features .nav-link.active {
@@ -652,7 +652,7 @@ section {
 }
 
 .services .title a {
-  color: #364146;
+  color: #262626;
 }
 
 .services .description {
@@ -714,7 +714,7 @@ section {
   font-size: 15px;
   font-weight: 400;
   line-height: 1;
-  color: #364146;
+  color: #262626;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   font-family: "Kumbh Sans", sans-serif;
@@ -892,7 +892,7 @@ section {
 }
 
 .cta h3 {
-  color: #364146;
+  color: #262626;
   font-size: 28px;
   font-weight: 700;
 }
@@ -959,7 +959,7 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
-  color: #364146;
+  color: #262626;
 }
 
 .testimonials .testimonial-item h4 {
@@ -1058,7 +1058,7 @@ section {
   right: 20px;
   background: #fff;
   padding: 20px 0;
-  color: #364146;
+  color: #262626;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   max-height: 95px;
   overflow: hidden;
@@ -1073,7 +1073,7 @@ section {
   font-weight: 700;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #364146;
+  color: #262626;
   position: relative;
   padding-bottom: 10px;
 }
@@ -1171,12 +1171,12 @@ section {
   padding: 20px 15px;
   font-size: 18px;
   font-weight: 400;
-  color: #777777;
+  color: #777B92;
 }
 
 .pricing h4 {
   font-size: 36px;
-  color: #364146;
+  color: #262626;
   font-weight: 700;
   font-family: "Kumbh Sans", sans-serif;
   margin-bottom: 20px;
@@ -1199,7 +1199,7 @@ section {
   margin: auto;
   width: fit-content;
   list-style: none;
-  color: #364146;
+  color: #262626;
   text-align: left;
   line-height: 20px;
   font-size: 14px;
@@ -1314,7 +1314,7 @@ section {
 }
 
 .faq .faq-list .collapsed {
-  color: #364146;
+  color: #262626;
 }
 
 .faq .faq-list .collapsed:hover {
@@ -1361,7 +1361,7 @@ section {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #364146;
+  color: #262626;
 }
 
 .contact .info p {
