@@ -546,9 +546,80 @@ section {
     }
 }
 
-.hero-digital-twins {
-    background-image: url(../img/thumbnail-digital-twin.png);
+/* ========== Tryout Section ========== */
+#tryout {
+	padding: 10% 0;
+    text-align: center;
+    background-image: url(../img/try-GT.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
+    background-size: cover;
+    background-position: center;
+}
+
+#tryout h2 {
+	color: #fff;
+}
+
+#tryout p.normal-regular {
+	color: #eaeef7;
+}
+
+#tryout p.mini-bold {
+	color: #eaeef7;
+}
+
+/*==============================================================
+ ===================== LANDING PAGE STYLES =====================
+==============================================================*/
+
+/* ========== Links Section ========== */
+#links {
+    background-color: #eaeef7;
+}
+
+#links .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#links .col-lg-5 {
+    padding: 75px 45px;
+    margin: 10px 10px;
+    box-shadow: 0 0px 29px 0 rgba(68, 88, 144, 0.3);
+    background-color: white;
+    flex-grow: 1;
+}
+
+#links .col-lg-5 > h1 {
+	color: #262626;
+	text-align: left;
+    max-width: 50%;
+    float: left;
+    height: 70%;
+}
+
+@media screen and (max-width: 490px) {
+    #links .col-lg-5 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #links .col-lg-5 > h1 {
+        max-width: 100%;
+    }
+}
+
+#links .col-lg-5 > a {
+    display: block;
+    clear: both;
+    float: left;
+    text-align: center;
+}
+
+#links .NOMPAGE-link {
+    background-image: url(../img/IMAGE.png);
+    background-size: 100% auto;
+    background-position: right center;
+    background-repeat: no-repeat;
 }
