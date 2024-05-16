@@ -39,10 +39,10 @@ class CustomHeader extends HTMLElement {
                         </li>
                         <li class="dropdown"><a href="../domaines-pages/domaines-landing.html" class="${currentPage.includes('domaines-') ? 'current-page' : ''}"><span>Domaines</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a class="nav-link scrollto" href="#">Blog</a></li>
-                                <li><a class="nav-link scrollto" href="#">Webinaire</a></li>
-                                <li><a class="nav-link scrollto" href="#">Vidéo</a></li>
-                                <li><a class="nav-link scrollto" href="#">Article</a></li>
+                                <li><a href="../domaines-pages/domaines-smart-building.html">Smart Building</a></li>
+                                <li><a href="#">Webinaire</a></li>
+                                <li><a href="#">Vidéo</a></li>
+                                <li><a href="#">Article</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#"><span>Actualités</span> <i class="bi bi-chevron-down"></i></a>
