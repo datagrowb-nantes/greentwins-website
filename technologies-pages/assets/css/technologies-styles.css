@@ -1155,8 +1155,7 @@ section {
 
 /* ========== DT Explanation Section ========== */
 #digital-twins-explanation {
-    padding: 0;
-    
+    padding: 0; 
 }
 
 #digital-twins-explanation .container {

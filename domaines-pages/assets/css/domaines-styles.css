@@ -623,3 +623,70 @@ section {
     background-position: right center;
     background-repeat: no-repeat;
 }
+
+/*==============================================================
+ ================== SMART BUILDING PAGE STYLES ==================
+==============================================================*/
+
+/* ========== Smart Building Explanation Section ========== */
+#smart-building-explanation {
+    padding: 0;
+}
+
+#smart-building-explanation .container {
+    display: contents;
+}
+
+#smart-building-explanation .first-row h2, #smart-building-explanation .second-row h2 {
+    color: #fff;
+}
+
+
+#smart-building-explanation .first-row p, #smart-building-explanation .second-row p {
+    color: #eaeef7;
+}
+
+#smart-building-explanation .third-row h2, #smart-building-explanation .third-row p{
+    color: #262626;
+}
+
+#smart-building-explanation .description {
+    padding: 20px 60px;
+}
+
+#smart-building-explanation .illustration {
+    padding: 0 !important;
+}
+
+#smart-building-explanation .first-row {
+    background-color: #5c58ff;
+    display: flex;
+    align-items: center;
+}
+
+#smart-building-explanation .second-row {
+    background-color: #8f7fff;
+    display: flex;
+    align-items: center;
+}
+
+#smart-building-explanation .third-row {
+    background-color: #b9a8ff;
+    display: flex;
+    align-items: center;
+}
+
+#smart-building-explanation .illustration > img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width:1200px) {
+    #smart-building-explanation .second-row .description {
+        order: 2;
+    }
+
+    #smart-building-explanation .second-row .illustration {
+        order: 1;
+    }
+}
