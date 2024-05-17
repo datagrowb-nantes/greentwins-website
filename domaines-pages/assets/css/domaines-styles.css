@@ -800,3 +800,70 @@ section {
         top: calc(50% - 25px);
     }
 }
+
+/*==============================================================
+ ================== METHANISATION PAGE STYLES ==================
+==============================================================*/
+
+/* ========== Methanisation Explanation Section ========== */
+#methanisation-explanation {
+    padding: 0;
+}
+
+#methanisation-explanation .container {
+    display: contents;
+}
+
+#methanisation-explanation .first-row h2, #methanisation-explanation .second-row h2 {
+    color: #fff;
+}
+
+
+#methanisation-explanation .first-row p, #methanisation-explanation .second-row p {
+    color: #eaeef7;
+}
+
+#methanisation-explanation .third-row h2, #methanisation-explanation .third-row p{
+    color: #262626;
+}
+
+#methanisation-explanation .description {
+    padding: 20px 60px;
+}
+
+#methanisation-explanation .illustration {
+    padding: 0 !important;
+}
+
+#methanisation-explanation .first-row {
+    background-color: #71ac47;
+    display: flex;
+    align-items: center;
+}
+
+#methanisation-explanation .second-row {
+    background-color: #95c275;
+    display: flex;
+    align-items: center;
+}
+
+#methanisation-explanation .third-row {
+    background-color: #b9d7a3;
+    display: flex;
+    align-items: center;
+}
+
+#methanisation-explanation .illustration > img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width:1200px) {
+    #methanisation-explanation .second-row .description {
+        order: 2;
+    }
+
+    #methanisation-explanation .second-row .illustration {
+        order: 1;
+    }
+}
