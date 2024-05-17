@@ -40,7 +40,7 @@ class CustomHeader extends HTMLElement {
                         <li class="dropdown"><a href="../domaines-pages/domaines-landing.html" class="${currentPage.includes('domaines-') ? 'current-page' : ''}"><span>Domaines</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 <li><a href="../domaines-pages/domaines-smart-building.html">Smart Building</a></li>
-                                <li><a href="#">Webinaire</a></li>
+                                <li><a href="../domaines-pages/domaines-methanisation.html">Méthanisation</a></li>
                                 <li><a href="#">Vidéo</a></li>
                                 <li><a href="#">Article</a></li>
                             </ul>
@@ -123,10 +123,10 @@ class CustomFooter extends HTMLElement {
                         </div>
         
                         <div class="col-lg-2 col-md-6 footer-links">
-                            <h4>Médias</h4>
+                            <h4>Domaines</h4>
                             <ul>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Blog</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Webinaire</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../domaines-pages/domaines-smart-building.html">Smart Building</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../domaines-pages/domaines-methanisation.html">Méthanisation</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="#">Vidéo</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="#">Article</a></li>
                             </ul>
