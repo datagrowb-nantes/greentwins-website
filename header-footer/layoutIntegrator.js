@@ -123,7 +123,7 @@ class CustomFooter extends HTMLElement {
                         </div>
         
                         <div class="col-lg-2 col-md-6 footer-links">
-                            <h4>Domaines</h4>
+                            <h4><a href="../domaines-pages/domaines-landing.html">Domaines</a></h4>
                             <ul>
                                 <li><i class="bx bx-chevron-right"></i> <a href="../domaines-pages/domaines-smart-building.html">Smart Building</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="../domaines-pages/domaines-methanisation.html">Méthanisation</a></li>
