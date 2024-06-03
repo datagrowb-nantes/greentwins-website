@@ -29,6 +29,8 @@ class CustomHeader extends HTMLElement {
                         </li>
                         <li class="dropdown"><a href="../technologies-pages/technologies-landing.html" class="${currentPage.includes('technologies-') ? 'current-page' : ''}"><span>Technologies</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
+                                <li class="mobile-section-link"> <a href="../technologies-pages/technologies-landing.html">Présentation</a></li>
+                                
                                 <li><a href="../technologies-pages/technologies-iot.html" class="nav-link scrollto">Internet of Things (IoT)</a></li>
                                 <li><a href="../technologies-pages/technologies-ia.html" class="nav-link scrollto">Module IA</a></li>
                                 <li><a href="../technologies-pages/technologies-digital-twins.html" class="nav-link scrollto">Jumeaux numériques</a></li>
@@ -39,6 +41,8 @@ class CustomHeader extends HTMLElement {
                         </li>
                         <li class="dropdown"><a href="../domaines-pages/domaines-landing.html" class="${currentPage.includes('domaines-') ? 'current-page' : ''}"><span>Domaines</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
+                                <li class="mobile-section-link"> <a href="../domaines-pages/domaines-landing.html">Présentation</a></li>
+                                
                                 <li><a href="../domaines-pages/domaines-smart-building.html">Smart Building</a></li>
                                 <li><a href="../domaines-pages/domaines-methanisation.html">Méthanisation</a></li>
                                 <li><a href="#">Vidéo</a></li>
