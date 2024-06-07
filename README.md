@@ -6,8 +6,8 @@
 GreenTwins est une plateforme numérique dédiée à l'optimisation énergétique des installations industrielles. Fondée sur le renforcement du savoir-faire en matière d'efficacité énergétique, GreenTwins exploite les principes avancés de l'Internet des Objets (IoT) et de l'Intelligence Artificielle (IA).
 
 
-#### Ce projet concerne le développement du site vitrine de GreenTwins. L'objectif du site est de présenter le fonctionnement de GreenTwins et ses activités de manière attrayante et informative.  
-#### Ce README va donner des informations sur son développement pour faciliter la maintenabilité du site.
+##### Ce projet concerne le développement du site vitrine de GreenTwins. L'objectif du site est de présenter le fonctionnement de GreenTwins et ses activités de manière attrayante et informative.  
+##### Ce README va donner des informations sur son développement pour faciliter la maintenabilité du site.
 <br>
 
 ## Table des Matières
@@ -21,7 +21,9 @@ GreenTwins est une plateforme numérique dédiée à l'optimisation énergétiqu
 - [Section Principale](#section-principale)
 	- Bases du Projet
    	- Landing Page
+	- Script d'intégration du Header et Footer des pages
    	- Section Technologies
+	- Section Domaines
  
 
 ## Ressources Utilisées
@@ -99,23 +101,26 @@ On trouve ensuite plusieurs dossiers avec des rôles spécifiques :
 Plusieurs ajouts ont ensuite été faits dans l'arborescence du projet. En effet, **Scaffold** ne contenait qu'une seule page, mais le site vitrine de **_GreenTwins_** en contiendra beaucoup plus.
 
 Le premier ajout est celui du dossier `technologies-pages` qui contient l'ensemble des documents nécessaires à la section **Technologies** du site.
-Ce dossier contient les 7 fichiers HTML qui correspondent à toutes les pages Technologies, ainsi que son propre dossier `assets`, qui va stocker les éléments nécéssaires au fonctionnement de toutes les pages.
+Ce dossier contient les 7 fichiers HTML qui correspondent à toutes les pages **Technologies**, ainsi que son propre dossier `assets`, qui va stocker les éléments nécéssaires au fonctionnement de toutes les pages.
 
-Le deuxième ajout fut celui du dossier `header-footer` qui contient un fichier JS permettant l'intégration automatique des sections header et footer de nos pages.
+Le deuxième ajout fut celui du dossier `header-footer` qui contient un fichier JS permettant l'intégration automatique des sections header et footer de nos pages, ainsi qu'un stylesheet CSS qui contient les styles pour ces mêmes sections.
 
 ____
 ### Landing Page
 
 La landing page est la page d'accueil du site vitrine, elle présente d'un point de vue extérieur ce qu'est **_GreenTwins_** et ses fonctionnalités. On peut, à partir de plusieurs liens, accéder aux autres parties du site.
 Elle contient également en bas de page un formulaire de contact.
+Ce formulaire de contact n'est pas fonctionnel, mais il est facile à implémenter en suivant ces étapes :
+- créer un compte DataGrowb' sur EmailJS.
+- créer un service de messagerie en se connectant avec l'addresse mail de contact pour le site GreenTwins.
+- une fois le service créé, il faut créer un template pour les mails qui seront envoyés à l'addresse de contact. 
+- Enregistrer ensuite le template, et il est possible de le tester directement depuis le site d'EmailJS.
+-  Un bouton **Test It** est disponible et permet d'envoyer un mail à l'addresse de contact.
+- Un bouton **Playground** est disponible et donne accès à une interface avec des codes HTML et JS. Ces codes peuvent être utilisés pour faire fonctionner le formulaire.
+- Il faut s'assurer que les différents inputs possèdent bien les champs *label* et *name* avec les termes spécifiques d'EmailJS comme `from_name` ou `email_id` par exemple. Ce sont ces termes qui permettent le fonctionnement du fichier JavaScript.
 
 ____
-### Section Technologies
-
-La section technologies est stockée dans le dossier `technologies-pages`, et a été premièrement désignée sur **Figma** en s'accordant avec les designs faits sur la landing page.
-Cette section est la première qui fut implémentée après la landing page.
-
-#### Script d'intégration du Header et Footer des pages
+### Script d'intégration du Header et Footer des pages
 
 Dès le début de l'implémentation, j'ai créé le script JS qui permet d'éviter de dupliquer le header et le footer dans l'intégralité de nos documents. Le layout de la page est ainsi stocké à un seul endoit, de sorte à faciliter l'applications de changements à toutes les pages en simultané.
 
@@ -131,17 +136,24 @@ Et enfin, on associe la classe JS `CustomFooter` à une balise HTML que nous pla
 
 Ainsi, dès le chargement de la page, lorsque le navigateur repère notre balise `<custom-footer></custom-footer>`, il va automatiquement y insérer ce qui a été renseigné dans la partie `innerHTML`.
 
+De plus, pour assurer le côté responsif de la Navbar, il a fallu ajouter un lien vers les pages de landing des différentes sections pour les écrans les plus petits. L'affichage de la Navbar sur ces écrans remplace le lien vers la page d'accueil d'une section pour à la place afficher un menu avec chacune des pages.
+Donc pour chaque création d'une nouvelle section, il faut s'assurer d'ajouter une ligne supplémentaire dans la Navbar :
+`<li class="mobile-section-link"> <a href="...">Présentation</a></li>`
+La classe `mobile-section-link` sert simplement à cacher ce lien sur les plus grands écrans. Il faut simplement remplacer les `...` par le lien de la page d'accueil de la section.
+
+Il est nécéssaire que pour la création de toutes les nouvelles pages, le script `layoutIntegrator.js` ainsi que le stylesheet `layout-styles.css` soient tous deux intégrés.
+Il faudra également mettre à jour les liens à la fois dans la navbar et le footer.
 ____
-##### Amélioration de la Navbar
+#### Amélioration de la Navbar
 
 Le même processus est répété pour le header de nos pages qui contient la Navbar.
 Mais on veut également afficher le lien de la page actuelle d'une certaine couleur pour indiquer que la page actuelle appartient à ce menu.
-Par exemple, si on est dans l'une des pages de la section technologies, la couleur de police du mot Technologies dans la Navbar doit être affiché en vert.
+Par exemple, si on est dans l'une des pages de la section **Technologies**, la couleur de police du mot `Technologies` dans la Navbar doit être affiché en vert.
 
 C'est facile à faire quand on a une navbar stockée dans chaque page HTML, mais quand on a une Navbar commune à toutes les pages, beaucoup moins.
 
 Cependant, JavaScript peut nous offrir une solution à ce problème :
-Il faut associer une classe spécifique au lien de la page Technologies et préciser en CSS la couleur du texte qui possède cette classe.
+Il faut associer une classe spécifique au lien de la page **Technologies** et préciser en CSS la couleur du texte qui possède cette classe.
 Dans la méthode `connectedCallBack()`, on va définir la constante suivante : `const currentPage = window.location.pathname;`. Cette constante va stocker le chemin actuel de la page courante, en incluant le nom du fichier.
 
 Et ensuite, on précise une expressionb booléenne JavaScript en tant que classe de notre lien :
@@ -149,10 +161,25 @@ Et ensuite, on précise une expressionb booléenne JavaScript en tant que classe
 
 On utilise ici un opérateur ternaire. Réduis à des termes plus simples on obtient ceci : `a ? 'b' : 'c'`. 
 Si la condition `a` est vérifiée, alors on donne la classe `b` à notre objet, sinon on lui donne la classe `c`.  
-Dans notre expression de base, `a` équivaut à la vérification que la chaîne de caractères `'technologies-'` est présente dans la constante `currentPage`. Si oui, on donne à notre élément la classe `current-page` qui sera stylée en CSS, et sinon on ne lui donne aucune classe.  
+Dans notre expression de base, `a` équivaut à la vérification que la chaîne de caractères `technologies-` est présente dans la constante `currentPage`. Si oui, on donne à notre élément la classe `current-page` qui sera stylée en CSS, et sinon on ne lui donne aucune classe.  
 
 ____
+### Section Technologies
+
+La section **Technologies** est stockée dans le dossier `technologies-pages`, et a été premièrement désignée sur **Figma** en s'accordant avec les designs faits sur la landing page.
+Première section implémentée après la Landing page, elle composée de sept pages. La page d'accueil présente globalement le fonctionnement et les outils utilisés par la plateforme GreenTwins, tandis que les six autres pages décrivent chaque outil plus en détail.
+
 #### Style CSS
 
 Pour ce qui est de la mise en page des styles CSS de nos pages Technologies, il valait mieux faire un stylesheet différent de celui de la landing page, en partant de 0 pour ne pas garder les effets inutiles de celui du template **Scaffold**.
 Mais comme les pages technologies ont elles-mêmes beaucoup de designs smilaires, les 7 pages ont un fichier commun : `technologies-styles.css`.
+
+____
+### Section Domaines
+
+La section **Domaines** est stockée dans le dossier `domaines-pages`.
+Implémentée directement après la section **Technologies**, elle est structurée de la même façon : une page d’accueil pour indiquer les différents domaines d’utilisation de la plateforme GreenTwins, et quatre pages pour expliquer plus en détail chacun de ces domaines.
+
+#### Style CSS
+
+Le stylesheet de cette section est similaire : stocké dans le dossier `css` et comporte les styles des 5 pages.
