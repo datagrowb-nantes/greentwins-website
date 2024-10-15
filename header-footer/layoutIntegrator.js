@@ -1,8 +1,8 @@
 class CustomHeader extends HTMLElement {
     connectedCallback() {
         const currentPage = window.location.pathname;
-        this.innerHTML = 
-        `<!-- Header -->
+        this.innerHTML =
+            `<!-- Header -->
         <header id="header" class="fixed-top d-flex align-items-center">
             <div class="container d-flex align-items-center">
         
@@ -57,12 +57,7 @@ class CustomHeader extends HTMLElement {
                                 <li><a class="nav-link scrollto" href="#">LinkedIn</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#"><span>Espace client</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a class="nav-link scrollto" href="#">Industriel</a></li>
-                                <li><a class="nav-link scrollto" href="#">Bureau d'études</a></li>
-                                <li><a class="nav-link scrollto" href="#">Collectivité</a></li>
-                            </ul>
+                        <li class="dropdown"><a href="https://green-twins-web-app.vercel.app"><span><strong>Espace client</strong></span>
                         </li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
@@ -79,8 +74,8 @@ customElements.define('custom-header', CustomHeader)
 
 class CustomFooter extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = 
-        `<!-- Footer -->
+        this.innerHTML =
+            `<!-- Footer -->
         <footer id="footer">
             <div class="footer-top">
                 <div class="container">
