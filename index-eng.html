@@ -30,6 +30,10 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="header-footer/layout-styles.css" rel="stylesheet">
+
+  	<!-- Header and Footer Layout integration -->
+	<script type="module" src="header-footer/layoutIntegrator.js"></script>
 
   <!-- =======================================================
   * Template Name: Scaffold - v4.9.1
@@ -40,87 +44,19 @@
 </head>
 
 <body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo me-auto">
-        <!-- <h1><a href="index-eng.html">Scaffold</a></h1>
-          Uncomment below if you prefer to use an image logo -->
-        <a href="index-eng.html"><img src="assets/img/logo.png" alt="GreenTwins Logo" class="img-fluid"></a>
-      </div>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="nav-link scrollto" href="#">Dashboard & consumption monitoring</a></li>
-              <li><a class="nav-link scrollto" href="#">Energy Audit</a></li>
-              <li><a class="nav-link scrollto" href="#">Carbon footprint</a></li>
-              <li><a class="nav-link scrollto" href="#">Energy mapping</a></li>
-              <li><a class="nav-link scrollto" href="#">Grant</a></li>
-              <li><a class="nav-link scrollto" href="#">Financing of works</a></li>
-              <li><a class="nav-link scrollto" href="#">Digitalization</a></li>
-              <li><a class="nav-link scrollto" href="#">Data & AI</a></li>
-              <li><a class="nav-link scrollto" href="#">ISO 51001</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Solutions</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="nav-link scrollto" href="#">Energy Management</a></li>
-              <li><a class="nav-link scrollto" href="#">Smart Grid Management</a></li>
-              <li><a class="nav-link scrollto" href="#">Data collection & valuation</a></li>
-              <li><a class="nav-link scrollto" href="#">Digitalization</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Medias</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="nav-link scrollto" href="#">Blog</a></li>
-              <li><a class="nav-link scrollto" href="#">Webinar</a></li>
-              <li><a class="nav-link scrollto" href="#">Video</a></li>
-              <li><a class="nav-link scrollto" href="#">Article</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="nav-link scrollto" href="#">@Television</a></li>
-              <li><a class="nav-link scrollto" href="#">Facebook</a></li>
-              <li><a class="nav-link scrollto" href="#">Twitter</a></li>
-              <li><a class="nav-link scrollto" href="#">LinkedIn</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Customer space</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="nav-link scrollto" href="#">Industrial</a></li>
-              <li><a class="nav-link scrollto" href="#">Design office</a></li>
-              <li><a class="nav-link scrollto" href="#">Community</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <!-- <div class="header-social-links d-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div> -->
-
-    </div>
-  </header><!-- End Header -->
+	<!-- Custom Header tag -->
+	<custom-header></custom-header>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 order-1 order-lg-1 hero-img" data-aos="fade-right">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-4 pt-5 pt-lg-0 order-2 order-lg-2 d-flex flex-column justify-content-center"
-          data-aos="fade-left">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6 order-1 order-lg-1 hero-img" data-aos="fade-right">
+					<img src="assets/img/greentwins-digital-twins-mockup.jpg" class="img-fluid" alt="">
+				</div>
+				<div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-2 d-flex flex-column justify-content-center"
+					data-aos="fade-left">
           <div>
             <h1>Energy efficency through Data</h1>
             <p>We take care of your Data to offer you an efficient use of your energy.</p>
@@ -140,13 +76,14 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container">
-
+        
         <div class="section-title-white" data-aos="fade-up">
           <h2>Why choose GreenTwins ?</h2>
           <p>GreenTwins is a digital platform – SaaS or "On Premise" option – collaborative and intelligent offered to
             energy users and GHG emitters, in order to monitor, manage and optimize their energy efficiency (EE),
             improve their competitiveness and reduce their carbon and environmental footprint.</p>
-        </div>
+            <img src="assets/img/greentwins-three-screenshots.png" class="img-fluid" alt="">
+          </div>
 
         <div class="row">
           <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in">
@@ -507,7 +444,8 @@
 
           <div class="col-lg-2 col-md-6">
             <div class="footer-info">
-              <a href="index-eng.html"><img src="assets/img/logo-white.png" alt="Logo de GreenTwins" class="img-fluid"></a>
+              <a href="index-eng.html"><img src="assets/img/logo-white.png" alt="Logo de GreenTwins"
+                  class="img-fluid"></a>
 
               <div class="social-links mt-3">
                 <a href="#" class="tv"><i class="bi bi-tv"></i></a>
