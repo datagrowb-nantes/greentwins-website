@@ -7,8 +7,6 @@ class CustomHeader extends HTMLElement {
             <div class="container d-flex align-items-center">
         
                 <div class="logo me-auto">
-                    <!-- <h1><a href="index.html">Scaffold</a></h1>
-                        Uncomment below if you prefer to use an image logo -->
                     <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo de GreenTwins" class="img-fluid"></a>
                 </div>
                 <nav id="navbar" class="navbar order-last order-lg-0">
@@ -17,7 +15,7 @@ class CustomHeader extends HTMLElement {
                             <ul>
                                 <li class="mobile-section-link"> <a href="../technologies-pages/technologies-landing.html">Présentation</a></li>
                                 
-                                <li><a href="../technologies-pages/technologies-iot.html" class="nav-link scrollto">Internet of Things (IoT)</a></li>
+                                <li><a href="../technologies-pages/technologies-iot.html" class="nav-link scrollto">Internet of aaaThings (IoT)</a></li>
                                 <li><a href="../technologies-pages/technologies-ia.html" class="nav-link scrollto">Module IA</a></li>
                                 <li><a href="../technologies-pages/technologies-digital-twins.html" class="nav-link scrollto">Jumeaux numériques</a></li>
                                 <li><a href="../technologies-pages/technologies-saas.html" class="nav-link scrollto">Plateforme SaaS</a></li>
@@ -36,7 +34,7 @@ class CustomHeader extends HTMLElement {
                         </li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav><!-- .navbar -->        
+                </nav>        
             </div>
         </header>
         <!-- End Header -->`

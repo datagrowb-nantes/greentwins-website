@@ -91,15 +91,11 @@ h6 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left top;
-  margin-top: 70px;
-  padding: 60px 0;
 }
 
 #hero h1 {
-  margin: 0 0 20px 0;
-  font-size: 48px;
+  font-size: xx-large;
   font-weight: 700;
-  line-height: 56px;
   color: #262626;
 }
 
@@ -125,7 +121,7 @@ h6 {
 
 .btn-get-started:hover {
   background: white;
-  color:#262626;
+  color: #262626;
   border: 2px solid #71AC47;
 }
 
@@ -158,9 +154,10 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 0;
   overflow: hidden;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  ;
 }
 
 .section-bg {

@@ -2,13 +2,15 @@
 # Header
 --------------------------------------------------------------*/
 #header {
-    height: 72px;
-    transition: all 0.5s;
-    z-index: 997;
-    transition: all 0.5s;
-    background: #fff;
+	height: 72px;
+	transition: all 0.5s;
+	z-index: 997;
+	transition: all 0.5s;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	position: sticky;
 }
-  
+
 #header .mobile-section-link {
 	display: none;
 }
@@ -157,7 +159,7 @@
 	}
 }
 
-.nav-item h2, 
+.nav-item h2,
 .icon-box h4 {
 	font-weight: 700;
 	color: #262626;
@@ -273,7 +275,7 @@
 }
 
 nav ul li a.current-page {
-    color: #71AC47;
+	color: #71AC47;
 }
 
 /*--------------------------------------------------------------
@@ -285,16 +287,16 @@ nav ul li a.current-page {
 	color: #fff;
 	font-size: 14px;
 }
-  
+
 #footer .footer-top {
 	background: #777B92;
 	padding: 60px 0 30px 0;
 }
-  
+
 #footer .footer-top .footer-info {
 	margin-bottom: 30px;
-  }
-  
+}
+
 #footer .footer-top .footer-info h3 {
 	font-size: 24px;
 	margin: 0 0 20px 0;
@@ -302,7 +304,7 @@ nav ul li a.current-page {
 	line-height: 1;
 	font-weight: 700;
 }
-  
+
 #footer .footer-top .footer-info p {
 	font-size: 14px;
 	line-height: 24px;
@@ -310,7 +312,7 @@ nav ul li a.current-page {
 	font-family: "Kumbh Sans", sans-serif;
 	color: #fff;
 }
-  
+
 #footer .footer-top .social-links a {
 	font-size: 18px;
 	display: inline-block;
@@ -325,13 +327,13 @@ nav ul li a.current-page {
 	height: 36px;
 	transition: 0.3s;
 }
-  
+
 #footer .footer-top .social-links a:hover {
 	background: #71AC47;
 	color: #fff;
 	text-decoration: none;
 }
-  
+
 #footer .footer-top h4 {
 	font-size: 16px;
 	font-weight: 700;
@@ -339,17 +341,17 @@ nav ul li a.current-page {
 	position: relative;
 	padding-bottom: 12px;
 }
-  
+
 #footer .footer-top .footer-links {
 	margin-bottom: 30px;
 }
-  
+
 #footer .footer-top .footer-links ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
-  
+
 #footer .footer-top .footer-links ul i {
 	padding-right: 2px;
 	color: #71AC47;
@@ -357,7 +359,7 @@ nav ul li a.current-page {
 	line-height: 1;
 	margin-left: -5px;
 }
-  
+
 #footer .footer-top .footer-links ul li {
 	padding: 10px 0;
 	display: flex;
@@ -367,18 +369,18 @@ nav ul li a.current-page {
 #footer .footer-top .footer-links ul li:first-child {
 	padding-top: 0;
 }
-  
+
 #footer .footer-top .footer-links ul a {
 	color: #fff;
 	transition: 0.3s;
 	display: inline-block;
 	line-height: 1;
 }
-  
+
 #footer .footer-top .footer-links ul a:hover {
 	color: #71AC47;
 }
-  
+
 #footer .footer-top .footer-newsletter form {
 	margin-top: 30px;
 	background: #fff;
@@ -387,7 +389,7 @@ nav ul li a.current-page {
 	border-radius: 4px;
 	border: 1px solid #e3e7e9;
 }
-  
+
 #footer .footer-top .footer-newsletter form input[type=email] {
 	border: 0;
 	padding: 4px;
@@ -408,23 +410,23 @@ nav ul li a.current-page {
 	transition: 0.3s;
 	border-radius: 0 4px 4px 0;
 }
-  
+
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
 	background: #007ab7;
 }
-  
+
 #footer .copyright {
 	text-align: center;
 	padding-top: 30px;
 }
-  
+
 #footer .credits {
 	padding-top: 8px;
 	text-align: center;
 	font-size: 13px;
 	color: #fff;
 }
-  
+
 #footer a {
 	color: #fff;
 }
