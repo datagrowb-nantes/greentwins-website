@@ -2,25 +2,27 @@
 <html lang="fr">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="path/to/aos.css">
     <link rel="stylesheet" href="assets/css/purestyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
     <title>GreenTwins</title>
 </head>
 
 <body>
-    <header class="sans-serif">
+    <header onmouseleave="handleMouseLeave()">
         <div class="logo">
             <a href="/">
-                <img src="assets/img/logo.png" alt="Logo">
+                <img src="assets/images/greentwins-logo.png" alt="Logo">
             </a>
         </div>
-        <nav class="nav-menu sans-serif" onmouseleave="handleMouseLeave()">
+        <nav class="nav-menu sans-serif">
             <div class="menu" onmouseenter="handleMouseEnter('tech')">
                 <p class="dropdown-item">Technologies</p>
-                <ul class="dropdown small" id="techDropdown">
+                <ul class="dropdown small" id="techDropdown" data-aos="fade-up" data-aos-duration="300">
                     <li>Internet of Things (IOT)</li>
                     <li>Module IA</li>
                     <li>Jumeaux Numériques</li>
@@ -32,7 +34,7 @@
 
             <div class="menu" onmouseenter="handleMouseEnter('domain')">
                 <p class="dropdown-item">Domaines</p>
-                <ul class="dropdown small" id="domainDropdown">
+                <ul class="dropdown small" id="domainDropdown" data-aos="fade-up" data-aos-duration="300">
                     <li>Smart Building</li>
                     <li>Méthanisation</li>
                 </ul>
@@ -44,207 +46,229 @@
         </nav>
     </header>
 
-    <!DOCTYPE html>
-    <html lang="fr">
+    <section class="sans-serif">
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="assets/images/greentwins-digital-twins-mockup.jpg" alt="Digital Twins Mockup">
+            </div>
+            <div class="hero text-container container-720">
+                <h1>L'efficience énergétique par la Data et l'IA</h1>
+                <p class='gray bold'>Maximisez l'exploitation énergétique au sein de votre entreprise en tirant
+                    pleinement part du potentiel insoupçonné de vos données.</p>
+                <p class='gray'>GreenTwins, plateforme numérique, se dédie à l'optimisation énergétique des
+                    installations industrielles. Fondée sur le renforcement du savoir-faire en matière d'efficacité
+                    énergétique, elle exploite les principes avancés de l'Internet des Objets (IoT) et de
+                    l'Intelligence Artificielle (IA)</p>
+                <button class="cta-button">En savoir plus</button>
+            </div>
+        </div>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="path/to/aos.css"> <!-- Chemin vers AOS CSS -->
-        <link rel="stylesheet" href="path/to/styles.css"> <!-- Ton fichier CSS -->
-        <title>GreenTwins</title>
-    </head>
-
-    <body>
-        <section class="sans-serif">
-            <div class="hero-container">
-                <div class="hero-image">
-                    <img src="assets/images/greentwins-digital-twins-mockup.jpg" alt="Digital Twins Mockup">
+        <div class="teal-bg-1 container">
+            <div data-aos="fade-up">
+                <h2 class="white text-align-center">Pourquoi choisir GreenTwins ?</h2>
+                <div class="container-720 centered-div">
+                    <p class="white">
+                        En tant que plateforme numérique collaborative et intelligente, notre solution se déploie en
+                        tant que service SaaS ou en option « On Premise » qui vous offre la possibilité de
+                        monitorer, piloter et optimiser votre consommation énergétique à grande échelle au
+                        quotidien.
+                    </p>
+                    <p class="white bold">
+                        Cette solution se montre adaptable à tous les acteurs soucieux de maîtriser efficacement
+                        leur empreinte énergétique et environnementale.
+                    </p>
                 </div>
-                <div class="hero text-container container-720">
-                    <h1>L'efficience énergétique par la Data et l'IA</h1>
-                    <p class='gray bold'>Maximisez l'exploitation énergétique au sein de votre entreprise en tirant
-                        pleinement part du potentiel insoupçonné de vos données.</p>
-                    <p class='gray'>GreenTwins, plateforme numérique, se dédie à l'optimisation énergétique des
-                        installations industrielles. Fondée sur le renforcement du savoir-faire en matière d'efficacité
-                        énergétique, elle exploite les principes avancés de l'Internet des Objets (IoT) et de
-                        l'Intelligence Artificielle (IA)</p>
-                    <button class="cta-button">En savoir plus</button>
+                <div class='text-align-center scroll-x'>
+                    <img src="assets/images/greentwins-three-screenshots.png" class="container-1400" alt="">
                 </div>
             </div>
 
-            <div class="teal-bg-1 container">
-                <div data-aos="fade-up">
-                    <h2 class="white text-align-center">Pourquoi choisir GreenTwins ?</h2>
-                    <div class="container-720 centered-div">
-                        <p class="white">
-                            En tant que plateforme numérique collaborative et intelligente, notre solution se déploie en
-                            tant que service SaaS ou en option « On Premise » qui vous offre la possibilité de
-                            monitorer, piloter et optimiser votre consommation énergétique à grande échelle au
-                            quotidien.
+            <div class="card-list">
+                <div class="card" data-aos="zoom-in" data-aos-duration="100">
+                    <div>
+                        <div class="icon"><img src="path/to/gear-icon.png" alt="Gear"
+                                style="color: #71AC47; width: 48px;"></div>
+                        <h3 class="title">Comment ça marche ?</h3>
+                        <p class="text-align-left gray">
+                            Le fonctionnement de notre solution repose sur la digitalisation des métiers et services
+                            de la performance énergétique, en exploitant les avancées de l'Intelligence Artificielle
+                            (IA) et en capitalisant sur une expertise approfondie des métiers de l'énergie.
                         </p>
-                        <p class="white bold">
-                            Cette solution se montre adaptable à tous les acteurs soucieux de maîtriser efficacement
-                            leur empreinte énergétique et environnementale.
+                    </div>
+                </div>
+
+                <div class="card" data-aos="zoom-in" data-aos-delay="150">
+                    <div>
+                        <div class="icon"><img src="path/to/share-icon.png" alt="Share"
+                                style="color: #71AC47; width: 48px;"></div>
+                        <h3 class="title">Partenaires</h3>
+                        <p class="text-align-left gray">
+                            Actionnez en temps réel les leviers de performance énergétique dans des secteurs clés
+                            tels que : l'industrie, le bâtiment ainsi que les réseaux de chaleur et de froid.
                         </p>
                     </div>
-                    <div class='text-align-center scroll-x'>
-                        <img src="assets/images/greentwins-three-screenshots.png" class="container-1400" alt="">
-                    </div>
                 </div>
 
-                <div class="card-list">
-                    <div class="card" data-aos="zoom-in" data-aos-duration="100">
-                        <div>
-                            <div class="icon"><img src="path/to/gear-icon.png" alt="Gear"
-                                    style="color: #71AC47; width: 48px;"></div>
-                            <h3 class="title">Comment ça marche ?</h3>
-                            <p class="text-align-left gray">
-                                Le fonctionnement de notre solution repose sur la digitalisation des métiers et services
-                                de la performance énergétique, en exploitant les avancées de l'Intelligence Artificielle
-                                (IA) et en capitalisant sur une expertise approfondie des métiers de l'énergie.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-aos="zoom-in" data-aos-delay="150">
-                        <div>
-                            <div class="icon"><img src="path/to/share-icon.png" alt="Share"
-                                    style="color: #71AC47; width: 48px;"></div>
-                            <h3 class="title">Partenaires</h3>
-                            <p class="text-align-left gray">
-                                Actionnez en temps réel les leviers de performance énergétique dans des secteurs clés
-                                tels que : l'industrie, le bâtiment ainsi que les réseaux de chaleur et de froid.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                        <div>
-                            <div class="icon"><img src="path/to/person-check-icon.png" alt="Person Check"
-                                    style="color: #71AC47; width: 48px;"></div>
-                            <h3 class="title">Accompagnement</h3>
-                            <p class="text-align-left gray">
-                                Facilitant l'accès aux performances et à la rigueur de l'IA, notre objectif est de
-                                soutenir toutes les entreprises désireuses de réduire leur empreinte énergétique.
-                                Profitez d'une expertise authentique en matière de Data Science appliquée à l'énergie !
-                            </p>
-                        </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                    <div>
+                        <div class="icon"><img src="path/to/person-check-icon.png" alt="Person Check"
+                                style="color: #71AC47; width: 48px;"></div>
+                        <h3 class="title">Accompagnement</h3>
+                        <p class="text-align-left gray">
+                            Facilitant l'accès aux performances et à la rigueur de l'IA, notre objectif est de
+                            soutenir toutes les entreprises désireuses de réduire leur empreinte énergétique.
+                            Profitez d'une expertise authentique en matière de Data Science appliquée à l'énergie !
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="hero-container" data-aos="fade-up">
-                <div class="hero text-container">
-                    <h2 class="green">Les jumeaux numériques</h2>
-                    <p class="gray">Une bibliothèque de modèles physiques d'équipements, personnalisables, pour
-                        reproduire virtuellement votre installation. Grâce à des algorithmes d'IA innovants, nous
-                        optimisons la performance énergétique en surveillant le niveau de performance d'un équipement
-                        par rapport aux meilleures technologies disponibles.</p>
-                    <p class="gray bold">De plus, la solution permet une maintenance prédictive avancée, détectant les
-                        incohérences des données d'entrée et réalisant facilement la détection d’anomalies.</p>
+        <div class="hero-container" data-aos="fade-up">
+            <div class="hero text-container">
+                <h2 class="green">Les jumeaux numériques</h2>
+                <p class="gray">Une bibliothèque de modèles physiques d'équipements, personnalisables, pour
+                    reproduire virtuellement votre installation. Grâce à des algorithmes d'IA innovants, nous
+                    optimisons la performance énergétique en surveillant le niveau de performance d'un équipement
+                    par rapport aux meilleures technologies disponibles.</p>
+                <p class="gray bold">De plus, la solution permet une maintenance prédictive avancée, détectant les
+                    incohérences des données d'entrée et réalisant facilement la détection d’anomalies.</p>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/greentwins-digital-twins-photo.jpg" class="container-1200"
+                    alt="Photomontage de jumeau numérique">
+            </div>
+        </div>
+
+        <div class="container gray-bg-4">
+            <div data-aos="fade-up">
+                <h2 class="text-align-center">GreenTwins est inscrite, « By Design » dans une démarche
+                    d'écoconception logicielle et Green Cloud.</h2>
+                <div class="container-720 text-align-center centered-div">
+                    <p class='gray'>Le projet vise à déployer une étude de faisabilité et des travaux de R&D, selon
+                        différents volets :</p>
                 </div>
-                <div class="hero-image">
-                    <img src="assets/images/greentwins-digital-twins-photo.jpg" class="container-1200"
-                        alt="Photomontage de jumeau numérique">
+                <div class='text-align-center scroll-x'>
+                    <img src="assets/images/greentwins-infographie.png" class="container-1400" alt="">
                 </div>
             </div>
 
-            <div class="container gray-bg-4">
-                <div data-aos="fade-up">
-                    <h2 class="text-align-center">GreenTwins est inscrite, « By Design » dans une démarche
-                        d'écoconception logicielle et Green Cloud.</h2>
-                    <div class="container-720 text-align-center centered-div">
-                        <p class='gray'>Le projet vise à déployer une étude de faisabilité et des travaux de R&D, selon
-                            différents volets :</p>
-                    </div>
-                    <div class='text-align-center scroll-x'>
-                        <img src="assets/images/greentwins-infographie.png" class="container-1400" alt="">
+            <div class="card-list">
+                <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                    <div>
+                        <div class="icon"><img src="path/to/icon1-square.png" alt="IoT"
+                                style="color: #71AC47; width: 36px;"></div>
+                        <h3 class="title">IoT</h3>
+                        <p class="text-align-left gray">
+                            Étude de faisabilité d'une plateforme logicielle à haute performance environnementale,
+                            alliant le génie logiciel, la data science et le métier de EE.
+                        </p>
                     </div>
                 </div>
 
-                <div class="card-list">
-                    <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                        <div>
-                            <div class="icon"><img src="path/to/icon1-square.png" alt="IoT"
-                                    style="color: #71AC47; width: 36px;"></div>
-                            <h3 class="title">IoT</h3>
-                            <p class="text-align-left gray">
-                                Étude de faisabilité d'une plateforme logicielle à haute performance environnementale,
-                                alliant le génie logiciel, la data science et le métier de EE.
-                            </p>
-                        </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="150">
+                    <div>
+                        <div class="icon"><img src="path/to/icon2-square.png" alt="Data/IA"
+                                style="color: #71AC47; width: 36px;"></div>
+                        <h3 class="title">Data/IA</h3>
+                        <p class="text-align-left gray">
+                            Mise en place de systèmes IoT et solutions de transfert de données fiables, moins
+                            énergivores et écoconçues.
+                        </p>
                     </div>
+                </div>
 
-                    <div class="card" data-aos="zoom-in" data-aos-delay="150">
-                        <div>
-                            <div class="icon"><img src="path/to/icon2-square.png" alt="Data/IA"
-                                    style="color: #71AC47; width: 36px;"></div>
-                            <h3 class="title">Data/IA</h3>
-                            <p class="text-align-left gray">
-                                Mise en place de systèmes IoT et solutions de transfert de données fiables, moins
-                                énergivores et écoconçues.
-                            </p>
-                        </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                    <div>
+                        <div class="icon"><img src="path/to/icon3-square.png" alt="SaaS"
+                                style="color: #71AC47; width: 36px;"></div>
+                        <h3 class="title">SaaS</h3>
+                        <p class="text-align-left gray">
+                            R&D sur le développement de solutions Big Data/IA, responsables, performantes et
+                            minimisant les ressources (calcul, cloud).
+                        </p>
                     </div>
+                </div>
 
-                    <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                        <div>
-                            <div class="icon"><img src="path/to/icon3-square.png" alt="SaaS"
-                                    style="color: #71AC47; width: 36px;"></div>
-                            <h3 class="title">SaaS</h3>
-                            <p class="text-align-left gray">
-                                R&D sur le développement de solutions Big Data/IA, responsables, performantes et
-                                minimisant les ressources (calcul, cloud).
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-aos="zoom-in" data-aos-delay="450">
-                        <div>
-                            <div class="icon"><img src="path/to/icon4-square.png" alt="Métier, EE"
-                                    style="color: #71AC47; width: 36px;"></div>
-                            <h3 class="title">Métier, EE</h3>
-                            <p class="text-align-left gray">
-                                ACV sur le cycle de vie global de la solution GreenTwins.
-                            </p>
-                        </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="450">
+                    <div>
+                        <div class="icon"><img src="path/to/icon4-square.png" alt="Métier, EE"
+                                style="color: #71AC47; width: 36px;"></div>
+                        <h3 class="title">Métier, EE</h3>
+                        <p class="text-align-left gray">
+                            ACV sur le cycle de vie global de la solution GreenTwins.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <script src="path/to/aos.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                AOS.init({
-                    duration: 1000,
-                    once: true,
-                });
-            });
-        </script>
-    </body>
-
-    </html>
-
+        </div>
+    </section>
 
     <script src="path/to/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            AOS.init({});
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
         });
-
-        function handleMouseEnter(dropdown) {
-            document.getElementById('techDropdown').style.display = dropdown === 'tech' ? 'block' : 'none';
-            document.getElementById('domainDropdown').style.display = dropdown === 'domain' ? 'block' : 'none';
-        }
-
-        function handleMouseLeave() {
-            document.getElementById('techDropdown').style.display = 'none';
-            document.getElementById('domainDropdown').style.display = 'none';
-        }
     </script>
 </body>
+
+<script src="path/to/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+    let isTechDropdownOpen = false;
+    let isDomainDropdownOpen = false;
+    let isClientDropdownOpen = false;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        AOS.init();
+    });
+
+    function handleMouseEnter(dropdown) {
+        if (dropdown === 'tech') {
+            isTechDropdownOpen = true;
+            isDomainDropdownOpen = false;
+            isClientDropdownOpen = false;
+            document.getElementById('techDropdown').style.display = 'block';
+            document.getElementById('domainDropdown').style.display = 'none';
+        } else if (dropdown === 'domain') {
+            isDomainDropdownOpen = true;
+            isTechDropdownOpen = false;
+            isClientDropdownOpen = false;
+            document.getElementById('domainDropdown').style.display = 'block';
+            document.getElementById('techDropdown').style.display = 'none';
+        } else if (dropdown === 'client') {
+            isClientDropdownOpen = true;
+            isTechDropdownOpen = false;
+            isDomainDropdownOpen = false;
+            // Aucun dropdown à afficher pour "Espace Client"
+        }
+    }
+
+    function handleMouseLeave() {
+        isTechDropdownOpen = false;
+        isDomainDropdownOpen = false;
+        isClientDropdownOpen = false;
+        document.getElementById('techDropdown').style.display = 'none';
+        document.getElementById('domainDropdown').style.display = 'none';
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({});
+    });
+
+    function handleMouseEnter(dropdown) {
+        document.getElementById('techDropdown').style.display = dropdown === 'tech' ? 'block' : 'none';
+        document.getElementById('domainDropdown').style.display = dropdown === 'domain' ? 'block' : 'none';
+    }
+
+    function handleMouseLeave() {
+        document.getElementById('techDropdown').style.display = 'none';
+        document.getElementById('domainDropdown').style.display = 'none';
+    }
+</script>
 
 </html>
