@@ -1,3 +1,4 @@
+// Initialisation d'AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', function () {
     AOS.init({
         duration: 1000,
@@ -5,9 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Gestion des événements de la souris pour les dropdowns
 function handleMouseEnter(dropdown) {
-    document.getElementById('techDropdown').style.display = dropdown === 'tech' ? 'block' : 'none';
-    document.getElementById('domainDropdown').style.display = dropdown === 'domain' ? 'block' : 'none';
+    const techDropdown = document.getElementById('techDropdown');
+    const domainDropdown = document.getElementById('domainDropdown');
+
+    techDropdown.style.display = dropdown === 'tech' ? 'block' : 'none';
+    domainDropdown.style.display = dropdown === 'domain' ? 'block' : 'none';
 }
 
 function handleMouseLeave() {
@@ -15,20 +20,22 @@ function handleMouseLeave() {
     document.getElementById('domainDropdown').style.display = 'none';
 }
 
+// Initialisation d'EmailJS
 (function () {
     emailjs.init("QUcy_3pIOG-sCm7wQ"); // Remplacez par votre ID utilisateur
 })();
 
+// Envoi du formulaire de contact
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
         message: document.getElementById('message').value,
     };
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+    emailjs.send("service_z72f4dk", "template_c7ri371", formData)
         .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);
             document.getElementById('successMessage').style.display = 'block';
