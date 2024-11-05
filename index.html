@@ -64,9 +64,9 @@
         </div>
 
         <div class="container teal-bg-1">
-            <div data-aos="fade-up">
-                <h2 class="white text-align-center">Pourquoi choisir GreenTwins ?</h2>
+            <div class="container" data-aos="fade-up">
                 <div class="container-720 centered-div">
+                    <h2 class="white text-align-center">Pourquoi choisir GreenTwins ?</h2>
                     <p class="white">
                         En tant que plateforme numérique collaborative et intelligente, notre solution se déploie en
                         tant que service SaaS ou en option « On Premise » qui vous offre la possibilité de
@@ -85,7 +85,7 @@
 
             <div class="card-list">
                 <div class="card" data-aos="zoom-in" data-aos-duration="100">
-                    <div>
+                    <div class="card-container">
                         <i class="bi bi-share" style="color: #71AC47; font-size: 48px;" aria-hidden="true"></i>
                         <h3 class="title">Comment ça marche ?</h3>
                         <p class="text-align-left gray">
@@ -97,7 +97,7 @@
                 </div>
 
                 <div class="card" data-aos="zoom-in" data-aos-delay="150">
-                    <div>
+                    <div class="card-container">
                         <i class="bi bi-gear" style="color: #71AC47; font-size: 48px;" aria-hidden="true"></i>
                         <h3 class="title">Partenaires</h3>
                         <p class="text-align-left gray">
@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                    <div>
+                    <div class="card-container">
                         <i class="bi bi-person-check" style="color: #71AC47; font-size: 48px;" aria-hidden="true"></i>
                         <h3 class="title">Accompagnement</h3>
                         <p class="text-align-left gray">
@@ -122,13 +122,15 @@
         </div>
 
         <div class="hero-container" data-aos="fade-up">
-            <div class="hero text-container">
+            <div class="hero text-container centered-div">
                 <h2 class="green">Les jumeaux numériques</h2>
-                <p class="gray">Une bibliothèque de modèles physiques d'équipements, personnalisables, pour
+                <p class="gray">Une bibliothèque de modèles physiques d'équipements, personnalisables,
+                    pour
                     reproduire virtuellement votre installation. Grâce à des algorithmes d'IA innovants, nous
                     optimisons la performance énergétique en surveillant le niveau de performance d'un équipement
                     par rapport aux meilleures technologies disponibles.</p>
-                <p class="gray bold">De plus, la solution permet une maintenance prédictive avancée, détectant les
+                <p class="gray bold">De plus, la solution permet une maintenance prédictive avancée,
+                    détectant les
                     incohérences des données d'entrée et réalisant facilement la détection d’anomalies.</p>
             </div>
             <div class="hero-image">
@@ -138,10 +140,10 @@
         </div>
 
         <div class="container gray-bg-4">
-            <div data-aos="fade-up">
-                <h2 class="text-align-center">GreenTwins est inscrite, « By Design » dans une démarche
-                    d'écoconception logicielle et Green Cloud.</h2>
+            <div data-aos="fade-up text-container">
                 <div class="container-720 text-align-center centered-div">
+                    <h2 class="text-align-center">GreenTwins est inscrite, « By Design » dans une démarche
+                        d'écoconception logicielle et Green Cloud.</h2>
                     <p class='gray'>Le projet vise à déployer une étude de faisabilité et des travaux de R&D, selon
                         différents volets :</p>
                 </div>
@@ -152,7 +154,7 @@
 
             <div class="card-list">
                 <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                    <div>
+                    <div class="card-container">
                         <i class="bi bi-1-square" style="color: #71AC47; font-size: 36px;" aria-hidden="true"></i>
                         <h3 class="title">IoT</h3>
                         <p class="text-align-left gray">
@@ -163,17 +165,18 @@
                 </div>
 
                 <div class="card" data-aos="zoom-in" data-aos-delay="150">
-                    <di>
+                    <div class="card-container">
                         <i class="bi bi-2-square" style="color: #71AC47; font-size: 36px;" aria-hidden="true"></i>
                         <h3 class="title">Data/IA</h3>
                         <p class="text-align-left gray">
                             Mise en place de systèmes IoT et solutions de transfert de données fiables, moins
                             énergivores et écoconçues.
                         </p>
+                    </div>
                 </div>
 
                 <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                    <div>
+                    <div class="card-container">
                         <i class="bi bi-3-square" style="color: #71AC47; font-size: 36px;" aria-hidden="true"></i>
                         <h3 class="title">SaaS</h3>
                         <p class="text-align-left gray">
@@ -184,7 +187,7 @@
                 </div>
 
                 <div class="card" data-aos="zoom-in" data-aos-delay="450">
-                    <div>
+                    <div class="card-container">
                         <i class="bi bi-4-square" style="color: #71AC47; font-size: 36px;" aria-hidden="true"></i>
                         <h3 class="title">Métier, EE</h3>
                         <p class="text-align-left gray">
@@ -202,36 +205,39 @@
                     <h2>Nous contacter</h2>
                     <p>Vous avez des questions sur GreenTwins ou souhaitez établir un premier contact ? Notre équipe est
                         à votre disposition pour vous aider.</p>
+
+                    <div class="flex-responsive container-720 contact-info">
+                        <span class="contact-span">
+                            <h3 class="green no-margin-padding">Par téléphone</h3>
+                            <p class="gray">+33 6 03 77 49 33</p>
+                        </span>
+                        <div class="contact-span">
+                            <h3 class="green no-margin-padding">Par email</h3>
+                            <p class="gray">contact@green-twins.fr</p>
+                        </div>
+                    </div>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Votre email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Votre message"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Envoyer</button>
+                    </form>
+                    <p id="successMessage" class="success-message" style="display: none;">Votre message a été envoyé
+                        avec
+                        succès !</p>
+                    <p id="errorMessage" class="error-message" style="display: none;">Une erreur s'est produite.
+                        Veuillez
+                        réessayer.</p>
                 </div>
-                <div class="flex-responsive container-720 contact-info">
-                    <span class="contact-span">
-                        <h3 class="green no-margin-padding">Par téléphone</h3>
-                        <p class="gray">+33 6 03 77 49 33</p>
-                    </span>
-                    <div class="contact-span">
-                        <h3 class="green no-margin-padding">Par email</h3>
-                        <p class="gray">contact@green-twins.fr</p>
-                    </div>
-                </div>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" name="name" required placeholder="Votre nom">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Votre email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Votre message"></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">Envoyer</button>
-                </form>
-                <p id="successMessage" class="success-message" style="display: none;">Votre message a été envoyé avec
-                    succès !</p>
-                <p id="errorMessage" class="error-message" style="display: none;">Une erreur s'est produite. Veuillez
-                    réessayer.</p>
             </div>
         </div>
     </section>
