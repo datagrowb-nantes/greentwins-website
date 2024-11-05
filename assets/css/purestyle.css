@@ -7,10 +7,18 @@ body {
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap');
 
-h1 {
-    font-size: xx-large;
+h1,
+h2,
+h3,
+h4,
+h5,
+ul {
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    font-size: xx-large;
 }
 
 .sans-serif {
@@ -75,10 +83,6 @@ h1 {
     padding: 2rem;
 }
 
-.logo img {
-    height: 40px;
-}
-
 .container-720 {
     max-width: 720px;
     justify-content: space-between;
@@ -92,7 +96,6 @@ h1 {
 
 .container-1400 {
     max-width: 1400px;
-    width: 100%;
 }
 
 .contact-span {
@@ -151,6 +154,10 @@ header {
 .nav-menu {
     display: flex;
     position: relative;
+}
+
+.header-logo img {
+    height: 40px;
 }
 
 .menu {
@@ -214,13 +221,54 @@ header {
     opacity: 1;
 }
 
-
 /* Footer */
-footer {
-    margin: 0;
+#footer {
+    background-color: #777B92;
+    font-family: "Kumbh Sans", sans-serif;
+    padding-bottom: 2rem;
+}
+
+.footer-logo img {
+    max-width: 240px;
+}
+
+.footer-item-list {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
     padding: 0;
-    height: 100px;
-    background-color: gray;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #71AC47;
+}
+
+.copyright {
+    color: #fff;
+    text-align: center;
 }
 
 /* Hero */
@@ -286,13 +334,11 @@ footer {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1168px) {
+@media screen and (max-width: 768px) {
     .flex-responsive {
         flex-direction: column;
     }
-}
 
-@media screen and (max-width: 768px) {
     .hero-container {
         display: block;
         height: max-content;
@@ -300,6 +346,14 @@ footer {
 
     .card-list {
         flex-direction: column;
+    }
+
+    .footer-logo {
+        margin: auto;
+    }
+
+    .footer-item-list {
+        gap: 0;
     }
 }
 
