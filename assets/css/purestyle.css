@@ -280,23 +280,6 @@ footer {
     flex-direction: column;
 }
 
-.contact-form div {
-    margin-bottom: 15px;
-}
-
-.contact-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-}
-
 .success-message,
 .error-message {
     margin-top: 10px;
@@ -318,4 +301,49 @@ footer {
     .card-list {
         flex-direction: column;
     }
+}
+
+.contact-span {
+    margin-right: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #262626;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: "Kumbh Sans";
+    font-size: 0.85rem;
+    width: 100%;
+    padding: 10px 0;
+    border: 2px solid #BDC1D3;
+    border-radius: 5px;
+    transition: border 0.3s;
+    text-indent: 10px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #262626;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.success-message,
+.error-message {
+    margin-top: 20px;
+    font-weight: bold;
 }
