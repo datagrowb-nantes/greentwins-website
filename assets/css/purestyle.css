@@ -380,16 +380,19 @@ header {
 /* Cards */
 .card-list {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
-    margin: auto;
-    max-width: 1024px;
     justify-content: center;
     align-items: stretch;
+    margin: auto;
+    max-width: 1024px;
+}
+
+.card-list.wrap {
+    flex-wrap: wrap;
 }
 
 .card {
-    flex: 1;
+    flex: 1 1 calc(33.33% - 1rem);
     padding: 3vh;
     background: #fff;
     box-shadow: 0 2px 2px 0 rgba(50, 50, 50, 0.25);
@@ -491,6 +494,10 @@ textarea {
         flex-direction: column;
     }
 
+    .card {
+        flex: 1 1 100%;
+    }
+
     .footer-logo {
         margin: auto;
     }
@@ -552,4 +559,5 @@ textarea {
         display: flex;
         flex-direction: column-reverse;
     }
+
 }
