@@ -30,6 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Composant Header Footer
+function loadHTML(file, elementId) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => document.getElementById(elementId).innerHTML = data)
+        .catch(error => console.log('Erreur de chargement du fichier:', error));
+}
+
+loadHTML('assets/components/header.html', 'header-container');
+loadHTML('assets/components/footer.html', 'footer-container');
+
+
 // Initialisation d'AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', function () {
     AOS.init({

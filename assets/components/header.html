@@ -1,0 +1,45 @@
+<header>
+    <div class="header-logo">
+        <a href="/">
+            <img src="assets/images/greentwins-logo-horizontal.png" alt="Logo">
+        </a>
+    </div>
+
+    <!-- Icône du menu burger -->
+    <div class="burger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation principale -->
+    <nav id="mainNav" class="nav-menu sans-serif">
+        <div class="menu">
+            <div class="dropdown-item dropdown-item-container">
+                <p class="dropdown-item" onclick="toggleDropdown('techDropdown')">Technologies</p>
+                <i class="bi bi-chevron-down" style="color: #71AC47; font-size: 16px;" aria-hidden="true"></i>
+            </div>
+            <ul class="dropdown small" id="techDropdown">
+                <li>Internet of Things (IOT)</li>
+                <li>Module IA</li>
+                <li>Jumeaux Numériques</li>
+                <li>Plateforme SaaS</li>
+                <li>Data</li>
+                <li>Métier EE</li>
+            </ul>
+        </div>
+        <div class="menu">
+            <div class="dropdown-item dropdown-item-container">
+                <p class="dropdown-item" onclick="toggleDropdown('domainDropdown')">Domaines</p>
+                <i class="bi bi-chevron-down" style="color: #71AC47; font-size: 16px;" aria-hidden="true"></i>
+            </div>
+            <ul class="dropdown small" id="domainDropdown">
+                <li>Smart Building</li>
+                <li>Méthanisation</li>
+            </ul>
+        </div>
+        <div class="menu bold">
+            <p class="dropdown-item" onclick="toggleDropdown('clientDropdown')">Espace Client</p>
+        </div>
+    </nav>
+</header>
