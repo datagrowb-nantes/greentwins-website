@@ -94,19 +94,19 @@ a:visited {
     background-color: #3888ae;
 }
 
-.green-bg-1 {
+.green-to-teal-bg-1 {
     background-color: #72ae47;
 }
 
-.green-bg-2 {
+.green-to-teal-bg-2 {
     background-color: #44aa61;
 }
 
-.green-bg-3 {
+.green-to-teal-bg-3 {
     background-color: #00a47a;
 }
 
-.green-bg-4 {
+.green-to-teal-bg-4 {
     background-color: #009b8f;
 }
 
@@ -168,7 +168,6 @@ a:visited {
 .centered-div {
     margin: 0 auto;
 }
-
 
 /* LANDING PAGE GREENTWINS */
 
