@@ -305,6 +305,7 @@ header {
 }
 
 .hero-image {
+    position: relative;
     flex: 0 0 50%;
 }
 
@@ -317,6 +318,10 @@ header {
 .hero.text-container {
     flex: 1;
     padding: 2rem;
+}
+
+.hero-image .front-image {
+    z-index: 2;
 }
 
 /* Cards */
