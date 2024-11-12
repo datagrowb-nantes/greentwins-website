@@ -13,13 +13,22 @@
 </head>
 
 <body>
-    <header onmouseleave="handleMouseLeave()">
+    <header>
         <div class="header-logo">
             <a href="/">
                 <img src="assets/images/greentwins-logo-horizontal.png" alt="Logo">
             </a>
         </div>
-        <nav class="nav-menu sans-serif">
+
+        <!-- Burger Menu Icon -->
+        <div class="burger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu sans-serif" id="mainNav">
             <div class="menu" onmouseenter="handleMouseEnter('tech')">
                 <p class="dropdown-item">Technologies</p>
                 <ul class="dropdown small" id="techDropdown" data-aos="fade-up" data-aos-duration="300">
@@ -45,6 +54,13 @@
             </div>
         </nav>
     </header>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+    </script>
 
     <section class="sans-serif">
         <div class="hero-container">
