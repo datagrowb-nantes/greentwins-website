@@ -13,24 +13,27 @@
 </head>
 
 <body>
-    <header onmouseleave="handleMouseLeave()">
+    <header>
         <div class="header-logo">
             <a href="/">
                 <img src="assets/images/greentwins-logo-horizontal.png" alt="Logo">
             </a>
         </div>
-        
+
         <!-- Icône du menu burger -->
         <div class="burger-icon" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-    
+
         <!-- Navigation principale -->
         <nav id="mainNav" class="nav-menu sans-serif">
-            <div class="menu" onmouseenter="handleMouseEnter('tech')">
-                <p class="dropdown-item">Technologies</p>
+            <div class="menu">
+                <div class="dropdown-item dropdown-item-container">
+                    <p class="dropdown-item" onclick="toggleDropdown('techDropdown')">Technologies</p>
+                    <i class="bi bi-chevron-down" style="color: #71AC47; font-size: 16px;" aria-hidden="true"></i>
+                </div>
                 <ul class="dropdown small" id="techDropdown">
                     <li>Internet of Things (IOT)</li>
                     <li>Module IA</li>
@@ -40,15 +43,18 @@
                     <li>Métier EE</li>
                 </ul>
             </div>
-            <div class="menu" onmouseenter="handleMouseEnter('domain')">
-                <p class="dropdown-item">Domaines</p>
+            <div class="menu">
+                <div class="dropdown-item dropdown-item-container">
+                    <p class="dropdown-item" onclick="toggleDropdown('domainDropdown')">Domaines</p>
+                    <i class="bi bi-chevron-down" style="color: #71AC47; font-size: 16px;" aria-hidden="true"></i>
+                </div>
                 <ul class="dropdown small" id="domainDropdown">
                     <li>Smart Building</li>
                     <li>Méthanisation</li>
                 </ul>
             </div>
-            <div class="menu bold" onmouseenter="handleMouseEnter('client')">
-                <p class="dropdown-item">Espace Client</p>
+            <div class="menu bold">
+                <p class="dropdown-item" onclick="toggleDropdown('clientDropdown')">Espace Client</p>
             </div>
         </nav>
     </header>

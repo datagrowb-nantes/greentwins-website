@@ -185,6 +185,7 @@ header {
 
 .dropdown {
     display: none;
+    opacity: 0;
     position: absolute;
     top: 100%;
     left: 0;
@@ -196,9 +197,11 @@ header {
     z-index: 1000;
     width: max-content;
     border-radius: 0.5vh;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+}
+
+.dropdown.show {
+    display: block;
+    opacity: 1;
 }
 
 .dropdown li {
@@ -213,8 +216,14 @@ header {
     background-color: #EAEEF7;
 }
 
+.dropdown-item-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
 .dropdown-item {
-    margin: 0;
+    margin: 0 auto;
 }
 
 .dropdown-item:hover {
@@ -459,5 +468,9 @@ textarea {
 
     .nav-menu .menu:last-child {
         border-bottom: none;
+    }
+
+    .dropdown.show {
+        width: 100%;
     }
 }

@@ -1,14 +1,35 @@
 // Menu Burger
 function toggleMenu() {
     const nav = document.getElementById("mainNav");
-    if (nav) {
-        nav.classList.toggle("active");
-        console.log("Menu toggled:", nav.classList.contains("active")); // Vérifie l'état du menu
-    } else {
-        console.error("L'élément #mainNav n'a pas été trouvé");
-    }
+    nav.classList.toggle("active");
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Fonction pour basculer l'affichage du sous-menu
+    window.toggleDropdown = function (dropdownId) {
+        // Fermer tous les autres sous-menus
+        document.querySelectorAll(".dropdown").forEach((dropdown) => {
+            if (dropdown.id !== dropdownId) {
+                dropdown.classList.remove("show");
+            }
+        });
+
+        // Basculer l'affichage du sous-menu actuel
+        const dropdown = document.getElementById(dropdownId);
+        if (dropdown) {
+            dropdown.classList.toggle("show");
+        }
+    };
+
+    // Masquer les sous-menus lorsque l'on clique en dehors
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".menu") && !event.target.closest(".burger-icon")) {
+            document.querySelectorAll(".dropdown.show").forEach((dropdown) => {
+                dropdown.classList.remove("show");
+            });
+        }
+    });
+});
 // Initialisation d'AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', function () {
     AOS.init({
