@@ -22,6 +22,14 @@ h1 {
     font-size: xx-large;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
 .sans-serif {
     font-family: 'Kumbh Sans', sans-serif;
 }
