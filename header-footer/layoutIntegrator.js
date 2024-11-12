@@ -15,7 +15,7 @@ class CustomHeader extends HTMLElement {
                             <ul>
                                 <li class="mobile-section-link"> <a href="../technologies-pages/technologies-landing.html">Présentation</a></li>
                                 
-                                <li><a href="../technologies-pages/technologies-iot.html" class="nav-link scrollto">Internet of aaaThings (IoT)</a></li>
+                                <li><a href="../technologies-pages/technologies-iot.html" class="nav-link scrollto">Internet of Things (IoT)</a></li>
                                 <li><a href="../technologies-pages/technologies-ia.html" class="nav-link scrollto">Module IA</a></li>
                                 <li><a href="../technologies-pages/technologies-digital-twins.html" class="nav-link scrollto">Jumeaux numériques</a></li>
                                 <li><a href="../technologies-pages/technologies-saas.html" class="nav-link scrollto">Plateforme SaaS</a></li>

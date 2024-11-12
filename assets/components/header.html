@@ -13,19 +13,33 @@
 
     <nav id="mainNav" class="nav-menu sans-serif">
         <div class="menu">
-            <a href="technologies-pages/technologies-landing.html" class="dropdown-item dropdown-item-container">
+            <div class="dropdown-item dropdown-item-container">
                 <p class="dropdown-item" onclick="toggleDropdown('techDropdown')">Technologies</p>
                 <i class="bi bi-chevron-down" style="color: #71AC47; font-size: 16px;" aria-hidden="true"></i>
-            </a>
+            </div>
             <ul class="dropdown small" id="techDropdown">
-                <a href="">
+
+                <a href="technologies-pages/technologies-iot.html">
                     <li>Internet of Things (IOT)</li>
                 </a>
-                <li>Module IA</li>
-                <li>Jumeaux Numériques</li>
-                <li>Plateforme SaaS</li>
-                <li>Data</li>
-                <li>Métier EE</li>
+                <a href="technologies-pages/technologies-ia.html">
+                    <li>Module IA</li>
+                </a>
+                <a href="technologies-pages/technologies-digital-twins.html">
+                    <li>Jumeaux Numériques</li>
+                </a>
+                <a href="technologies-pages/technologies-saas.html">
+                    <li>Plateforme SaaS</li>
+                </a>
+                <a href="technologies-pages/technologies-data.html">
+                    <li>Data</li>
+                </a>
+                <a href="technologies-pages/technologies-metierEE.html">
+                    <li>Métier EE</li>
+                </a>
+                <a href="technologies-pages/technologies-landing.html">
+                    <li>Toutes les technologies</li>
+                </a>
             </ul>
         </div>
         <div class="menu">
@@ -34,12 +48,17 @@
                 <i class="bi bi-chevron-down" style="color: #71AC47; font-size: 16px;" aria-hidden="true"></i>
             </div>
             <ul class="dropdown small" id="domainDropdown">
-                <li>Smart Building</li>
-                <li>Méthanisation</li>
+                <a href="domaines-pages/domaines-smart-building.html">
+                    <li>Smart Building</li>
+                </a>
+                <a href="domaines-pages/domaines-methanisation.html">
+                    <li>Méthanisation</li>
+                </a>
             </ul>
         </div>
         <div class="menu bold">
-            <p class="dropdown-item" onclick="toggleDropdown('clientDropdown')">Espace Client</p>
+            <a href="http://green-twins-web-app.vercel.app" class="dropdown-item"
+                onclick="toggleDropdown('clientDropdown')">Espace Client</a>
         </div>
     </nav>
 </header>

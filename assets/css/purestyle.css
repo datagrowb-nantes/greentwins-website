@@ -22,12 +22,10 @@ h1 {
     font-size: xx-large;
 }
 
-a {
-    text-decoration: none;
-}
-
+a,
 a:visited {
     color: inherit;
+    text-decoration: none;
 }
 
 .sans-serif {
@@ -195,7 +193,7 @@ header {
     display: none;
     opacity: 0;
     position: absolute;
-    top: 100%;
+    top: 50px;
     left: 0;
     background-color: #fff;
     border: 1px solid #BDC1D3;
@@ -476,6 +474,10 @@ textarea {
 
     .nav-menu .menu:last-child {
         border-bottom: none;
+    }
+
+    .dropdown {
+        top: 100%;
     }
 
     .dropdown.show {
