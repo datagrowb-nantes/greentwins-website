@@ -1,3 +1,14 @@
+// Menu Burger
+function toggleMenu() {
+    const nav = document.getElementById("mainNav");
+    if (nav) {
+        nav.classList.toggle("active");
+        console.log("Menu toggled:", nav.classList.contains("active")); // Vérifie l'état du menu
+    } else {
+        console.error("L'élément #mainNav n'a pas été trouvé");
+    }
+}
+
 // Initialisation d'AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', function () {
     AOS.init({

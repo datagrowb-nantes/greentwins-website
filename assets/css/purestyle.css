@@ -418,8 +418,8 @@ textarea {
     }
 
     .burger-icon {
-        cursor: pointer;
         display: inline-block;
+        cursor: pointer;
     }
 
     .burger-icon span {
@@ -433,12 +433,31 @@ textarea {
 
     #mainNav {
         display: none;
+        /* Masquer par défaut */
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        /* Ajuster pour être en dessous du header */
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
 
     #mainNav.active {
         display: flex;
+        /* Afficher quand active */
+    }
+
+    .nav-menu .menu {
+        padding: 10px 20px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-menu .menu:last-child {
+        border-bottom: none;
     }
 }

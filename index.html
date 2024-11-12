@@ -13,25 +13,25 @@
 </head>
 
 <body>
-    <header>
+    <header onmouseleave="handleMouseLeave()">
         <div class="header-logo">
             <a href="/">
                 <img src="assets/images/greentwins-logo-horizontal.png" alt="Logo">
             </a>
         </div>
-
-        <!-- Burger Menu Icon -->
+        
+        <!-- Icône du menu burger -->
         <div class="burger-icon" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
-        <!-- Navigation Menu -->
-        <nav class="nav-menu sans-serif" id="mainNav">
+    
+        <!-- Navigation principale -->
+        <nav id="mainNav" class="nav-menu sans-serif">
             <div class="menu" onmouseenter="handleMouseEnter('tech')">
                 <p class="dropdown-item">Technologies</p>
-                <ul class="dropdown small" id="techDropdown" data-aos="fade-up" data-aos-duration="300">
+                <ul class="dropdown small" id="techDropdown">
                     <li>Internet of Things (IOT)</li>
                     <li>Module IA</li>
                     <li>Jumeaux Numériques</li>
@@ -40,27 +40,18 @@
                     <li>Métier EE</li>
                 </ul>
             </div>
-
             <div class="menu" onmouseenter="handleMouseEnter('domain')">
                 <p class="dropdown-item">Domaines</p>
-                <ul class="dropdown small" id="domainDropdown" data-aos="fade-up" data-aos-duration="300">
+                <ul class="dropdown small" id="domainDropdown">
                     <li>Smart Building</li>
                     <li>Méthanisation</li>
                 </ul>
             </div>
-
             <div class="menu bold" onmouseenter="handleMouseEnter('client')">
                 <p class="dropdown-item">Espace Client</p>
             </div>
         </nav>
     </header>
-
-    <script>
-        function toggleMenu() {
-            const nav = document.getElementById("mainNav");
-            nav.classList.toggle("active");
-        }
-    </script>
 
     <section class="sans-serif">
         <div class="hero-container">
