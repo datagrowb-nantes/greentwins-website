@@ -35,13 +35,42 @@ document.addEventListener("DOMContentLoaded", function () {
 function loadHTML(file, elementId) {
     fetch(file)
         .then(response => response.text())
-        .then(data => document.getElementById(elementId).innerHTML = data)
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+
+            // Réécriture des liens relatifs dans le header et footer
+            rewriteLinks();
+        })
         .catch(error => console.log('Erreur de chargement du fichier:', error));
 }
 
-loadHTML('assets/components/header.html', 'header-container');
-loadHTML('assets/components/footer.html', 'footer-container');
+loadHTML('/assets/components/header.html', 'header-container');
+loadHTML('/assets/components/footer.html', 'footer-container');
 
+// Réécriture des liens relatifs
+function rewriteLinks() {
+    const currentPath = window.location.pathname;  // Récupère le chemin actuel
+    const basePath = currentPath.substring(0, currentPath.lastIndexOf("/"));  // Récupère le dossier parent
+    const links = document.querySelectorAll("a");  // Sélectionne tous les liens
+
+    links.forEach(link => {
+        const href = link.getAttribute("href");
+
+        // Si le lien est relatif et qu'il n'est pas un lien externe
+        if (href && !href.startsWith("http") && !href.startsWith("#")) {
+            // Si le lien commence par /, il est déjà relatif à la racine, on ne le modifie pas
+            if (href.startsWith("/")) {
+                return;
+            }
+            // Ajoute le dossier parent pour que le lien fonctionne quel que soit le sous-dossier
+            link.setAttribute("href", basePath + "/" + href);
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    rewriteLinks();
+});
 
 // Initialisation d'AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', function () {
