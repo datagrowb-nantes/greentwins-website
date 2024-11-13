@@ -131,6 +131,38 @@ a:visited {
     background-color: #c81d46;
 }
 
+.green-to-blue-bg-1 {
+    background-color: #72ae47;
+}
+
+.green-to-blue-bg-2 {
+    background-color: #629761;
+}
+
+.green-to-blue-bg-3 {
+    background-color: #517f7c;
+}
+
+.green-to-blue-bg-4 {
+    background-color: #416896;
+}
+
+.green-to-blue-bg-5 {
+    background-color: #3150b0;
+}
+
+.green-to-blue-bg-6 {
+    background-color: #2139ca;
+}
+
+.green-to-blue-bg-7 {
+    background-color: #293498;
+}
+
+.green-to-blue-bg-8 {
+    background-color: #4b15b0;
+}
+
 .gray-bg-4 {
     background-color: #EAEEF7;
 }
@@ -209,6 +241,7 @@ a:visited {
     width: 100%;
     height: 100%;
     min-height: 480px;
+    max-height: 720px;
 }
 
 .hero-image .no-min-height {
@@ -396,6 +429,10 @@ header {
 }
 
 .copyright {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    gap: 1vh;
     color: #fff;
     text-align: center;
 }

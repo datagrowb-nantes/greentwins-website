@@ -47,6 +47,18 @@ function loadHTML(file, elementId) {
 loadHTML('/assets/components/header.html', 'header-container');
 loadHTML('/assets/components/footer.html', 'footer-container');
 
+// Année Copyright
+function setFooterYear() {
+    const yearElement = document.getElementById("year");
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    } else {
+        setTimeout(setFooterYear, 0);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", setFooterYear);
+
 // Réécriture des liens relatifs
 function rewriteLinks() {
     const currentPath = window.location.pathname;  // Récupère le chemin actuel
