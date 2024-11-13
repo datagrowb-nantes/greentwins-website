@@ -31,22 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Composant Header Footer
-function loadHTML(file, elementId) {
-    fetch(file)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(elementId).innerHTML = data;
-
-            // Réécriture des liens relatifs dans le header et footer
-            rewriteLinks();
-        })
-        .catch(error => console.log('Erreur de chargement du fichier:', error));
-}
-
-loadHTML('/assets/components/header.html', 'header-container');
-loadHTML('/assets/components/footer.html', 'footer-container');
-
 // Année Copyright
 function setFooterYear() {
     const yearElement = document.getElementById("year");
@@ -106,24 +90,56 @@ function handleMouseLeave() {
     document.getElementById('domainDropdown').style.display = 'none';
 }
 
-// Initialisation d'EmailJS
-(function () {
+// Composant Header, Footer, Contact
+function loadHTML(file, elementId) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+
+            // Si le fichier contact.html est chargé, initialiser le formulaire
+            if (elementId === 'contact-section') {
+                initializeContactForm(); // Fonction pour initialiser EmailJS et le formulaire
+            }
+
+            // Réécriture des liens relatifs dans le header et footer
+            rewriteLinks();
+        })
+        .catch(error => console.log('Erreur de chargement du fichier:', error));
+}
+
+loadHTML('/assets/components/header.html', 'header-section');
+loadHTML('/assets/components/contact.html', 'contact-section');
+loadHTML('/assets/components/footer.html', 'footer-section');
+
+// Initialisation du formulaire de contact
+function initializeContactForm() {
+    // Initialisation d'EmailJS
     emailjs.init("QUcy_3pIOG-sCm7wQ"); // Remplacez par votre ID utilisateur
-})();
 
-// Envoi du formulaire de contact
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    emailjs.sendForm("service_z72f4dk", "template_c7ri371", this)
-        .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-            document.getElementById('successMessage').style.display = 'block';
-            document.getElementById('errorMessage').style.display = 'none';
-            document.getElementById('contactForm').reset(); // Réinitialiser le formulaire
-        }, function (error) {
-            console.error('FAILED...', error);
-            document.getElementById('errorMessage').style.display = 'block';
-            document.getElementById('successMessage').style.display = 'none';
+        const formData = {
+            from_name: document.getElementById('name').value,
+            from_email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+        };
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_z72f4dk", "template_c7ri371", this)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    document.getElementById('successMessage').style.display = 'block';
+                    document.getElementById('errorMessage').style.display = 'none';
+                    document.getElementById('contactForm').reset(); // Réinitialiser le formulaire
+                }, function (error) {
+                    console.error('FAILED...', error);
+                    document.getElementById('errorMessage').style.display = 'block';
+                    document.getElementById('successMessage').style.display = 'none';
+                });
         });
-});
+    });
+}
