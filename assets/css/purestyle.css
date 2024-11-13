@@ -535,16 +535,12 @@ textarea {
     resize: none;
 }
 
-.success-message,
-.error-message {
-    margin-top: 20px;
-    font-weight: bold;
+.success-message {
+    color: #71AC47;
 }
 
-.success-message,
 .error-message {
-    margin-top: 10px;
-    font-weight: bold;
+    color: #c81d46
 }
 
 @media screen and (max-width: 768px) {

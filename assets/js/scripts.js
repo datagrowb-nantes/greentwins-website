@@ -115,13 +115,7 @@ function handleMouseLeave() {
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const formData = {
-        from_name: document.getElementById('name').value,
-        from_email: document.getElementById('email').value,
-        message: document.getElementById('message').value,
-    };
-
-    emailjs.send("service_z72f4dk", "template_c7ri371", formData)
+    emailjs.sendForm("service_z72f4dk", "template_c7ri371", this)
         .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);
             document.getElementById('successMessage').style.display = 'block';
