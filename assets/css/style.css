@@ -543,6 +543,14 @@ textarea {
     color: #c81d46
 }
 
+/* Actualites */
+.article-image {
+    max-height: 17rem;
+    width: 100%;
+    border-radius: 0.5vh;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 768px) {
     .flex-responsive {
         flex-direction: column;

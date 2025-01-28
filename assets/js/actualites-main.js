@@ -5,9 +5,9 @@ const articlesContainer = document.getElementById('articles-container');
 function renderArticles() {
     articles.forEach(article => {
         const articleCard = `
-        <div class="container gray-bg-4">
-            <div class="card landing" data-aos="zoom-in" data-aos-delay="0" style="background-image: url('${article.image}')">
+            <div class="card landing" data-aos="zoom-in" data-aos-delay="0">
                 <div class="card-container landing">
+                    <img class="article-image" src='${article.image}')">
                     <h2 class="title">${article.title}</h2>
                     <p class="gray">${article.description}</p>
                     <a href="${article.link}">
