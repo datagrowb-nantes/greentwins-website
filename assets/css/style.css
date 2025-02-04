@@ -443,6 +443,7 @@ header {
     gap: 1rem;
     justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
     margin: auto;
     max-width: 1024px;
 }
@@ -457,6 +458,8 @@ header {
     background: #fff;
     box-shadow: 0 2px 2px 0 rgba(50, 50, 50, 0.25);
     text-align: center;
+    align-self: stretch;
+    /* Étire toutes les cartes pour la hauteur de la plus grande */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -466,7 +469,7 @@ header {
 
 .card-container {
     display: flex;
-    align-items: center;
+    flex-grow: 1;
     flex-direction: column;
     gap: 1rem;
 }
@@ -483,11 +486,18 @@ header {
 
 .card.landing {
     background-size: cover;
+    /* Assure que l'image couvre entièrement la div */
     background-position: center;
+    /* Centre l'image */
     background-repeat: no-repeat;
-    justify-content: center;
+    /* Évite les répétitions */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: start;
     text-align: left;
+    min-height: 250px;
+    /* Permet d'assurer une hauteur minimale pour une bonne visibilité */
 }
 
 /* Contact */
@@ -545,10 +555,11 @@ textarea {
 
 /* Actualites */
 .article-image {
-    max-height: 17rem;
+    max-height: 18rem;
     width: 100%;
     border-radius: 0.5vh;
     object-fit: cover;
+    flex-grow: 1;
 }
 
 @media screen and (max-width: 768px) {
