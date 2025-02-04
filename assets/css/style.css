@@ -562,6 +562,11 @@ textarea {
     flex-grow: 1;
 }
 
+.article-container {
+    padding: 2rem;
+}
+
+
 @media screen and (max-width: 768px) {
     .flex-responsive {
         flex-direction: column;
