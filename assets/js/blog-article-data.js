@@ -4,7 +4,7 @@ export const articles = [
         title: "Comment l'IA peut transformer la méthanisation",
         description: "Découvrez les innovations de GreenTwins dans la gestion des sites de méthanisation grâce à l'IA.",
         image: "/assets/images/img-module-ia-methanisation-optimisation-production.jpg",
-        link: "/actualites-pages/articles/comment-l-ia-peut-transformer-la-methanisation.html"
+        link: "/blog-pages/articles/comment-l-ia-peut-transformer-la-methanisation.html"
     },
     {
         id: 2,

@@ -1,4 +1,4 @@
-import { articles } from '/assets/js/actualites-article-data.js';
+import { articles } from '/assets/js/blog-article-data.js';
 
 const articlesContainer = document.getElementById('articles-container');
 
