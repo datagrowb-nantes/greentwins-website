@@ -1,5 +1,7 @@
 import { articles } from "/assets/js/blog-article-data.js";
 
+const sortedArticles = articles.sort((a, b) => a.id - b.id);
+
 document.addEventListener("DOMContentLoaded", () => {
     // 1️⃣ Récupère le slug depuis l'URL
     const params = new URLSearchParams(window.location.search);
@@ -13,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".article-container").innerHTML = `
             <h1>Article non trouvé</h1>
             <p>Désolé, l'article que vous cherchez n'existe pas.</p>
-            <a href="/actualites.html">Retour aux articles</a>
+            <a href="/blog-pages/blog-landing.html">Retour aux articles</a>
         `;
         return;
     }
