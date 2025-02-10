@@ -288,17 +288,17 @@ a:visited {
 
 .category-button {
     font-family: 'Kumbh Sans', sans-serif;
-    font-weight: 700;
     border: none;
     color: white;
-    padding: 12px 28px;
+    padding: 5px 10px;
     transition: 0.25s;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     cursor: pointer;
     background: #71AC47;
     color: #fff;
     border: 2px solid #71AC47;
     cursor: pointer;
+    border-radius: 100px;
 }
 
 .cta-button:hover,
@@ -473,6 +473,10 @@ header {
     flex-wrap: wrap;
 }
 
+.card-list.categories-container {
+    gap: 0.5rem;
+}
+
 .card {
     flex: 1 1 calc(33.33% - 1rem);
     padding: 3vh;
@@ -571,9 +575,6 @@ textarea {
 }
 
 /* Actualites */
-.card-container.article-card {
-    flex-grow: 1;
-}
 
 .categories-container {
     margin: 0 auto 1rem auto;
@@ -630,6 +631,10 @@ textarea {
 
     .card-list {
         flex-direction: column;
+    }
+
+    .card-list.categories-container {
+        flex-direction: row;
     }
 
     .card {
