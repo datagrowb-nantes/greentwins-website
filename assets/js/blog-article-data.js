@@ -3,9 +3,9 @@ export const articles = [
         id: 1,
         slug: "comment-repondre-aux-exigences-reglementaires-en-matiere-d-energie",
         title: "Comment répondre aux exigences réglementaires en matière d'énergie ?",
-        description: "Face à un cadre réglementaire en constante évolution, il est crucial pour les entreprises d’adopter des outils adaptés afin d’assurer leur conformité énergétique tout en optimisant leurs performances. Découvrez les solutions essentielles pour anticiper et répondre efficacement aux exigences en vigueur.",
+        description: "Face à un cadre réglementaire en constante évolution, il est crucial pour les entreprises d’adopter des outils adaptés afin d’assurer leur conformité énergétique tout en optimisant leurs performances.",
         category: "Énergie & IA",
-        date: "04/02/2025",
+        date: "2025-02-03",
         image: "/assets/images/img-smart-building-pexels-mohamed-hamdi-510308652-16282306.jpg",
         link: "/blog-pages/article.html?slug=comment-repondre-aux-exigences-reglementaires-en-matiere-d-energie",
         content: `

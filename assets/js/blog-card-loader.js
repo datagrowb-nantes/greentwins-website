@@ -10,7 +10,7 @@ function loadArticle(article) {
     articleCard.style.transition = 'opacity 0.5s ease';
 
     const articleContainer = document.createElement('div');
-    articleContainer.classList.add('card-container', 'landing');
+    articleContainer.classList.add('card-container', 'article-card');
 
     const articleImage = new Image();
     articleImage.src = article.image;

@@ -1,14 +1,20 @@
 import { articles } from "/assets/js/blog-article-data.js";
 
-const sortedArticles = articles.sort((a, b) => a.id - b.id);
+// 🔹 Tri par ID, et si égalité, tri par date décroissante
+const sortedArticles = [...articles].sort((a, b) => {
+    if (a.id === b.id) {
+        return new Date(b.date) - new Date(a.date); // Tri par date descendante si ID égal
+    }
+    return a.id - b.id; // Tri par ID croissant
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     // 1️⃣ Récupère le slug depuis l'URL
     const params = new URLSearchParams(window.location.search);
     const articleSlug = params.get("slug");
 
-    // 2️⃣ Cherche l'article correspondant
-    const article = articles.find(a => a.slug === articleSlug);
+    // 2️⃣ Cherche l'article correspondant dans la liste triée
+    const article = sortedArticles.find(a => a.slug === articleSlug);
 
     if (!article) {
         // Si l'article n'existe pas, afficher un message d'erreur
