@@ -286,6 +286,26 @@ a:visited {
     cursor: pointer;
 }
 
+.cta-button:hover {
+    background-color: #fff;
+    color: #71AC47;
+}
+
+.sort-button {
+    background-color: #71AC47;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    transition: 0.25s;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.sort-button:hover {
+    background-color: #5d8c36;
+}
+
 .category-button {
     font-family: 'Kumbh Sans', sans-serif;
     border: none;
@@ -294,22 +314,21 @@ a:visited {
     transition: 0.25s;
     font-size: 0.75rem;
     cursor: pointer;
-    background: #71AC47;
-    color: #fff;
+    background: #fff;
+    color: #262626;
     border: 2px solid #71AC47;
     cursor: pointer;
     border-radius: 100px;
 }
 
-.cta-button:hover,
 .category-button:hover {
-    background-color: #fff;
-    color: #71AC47;
+    background-color: #71AC47;
+    color: #fff;
 }
 
 .category-button.active {
-    background-color: #fff;
-    color: #71AC47;
+    background-color: #71AC47;
+    color: #fff;
     border-color: #71AC47;
 }
 
@@ -577,12 +596,18 @@ textarea {
     gap: 0.5rem;
 }
 
-.categories-container {
-    margin: 0 auto 1rem auto;
-}
-
 .article-card.card-container {
     align-items: start;
+}
+
+.sorting-container {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0 auto 1rem auto;
+    max-width: 1024px;
 }
 
 .article-image {
@@ -644,6 +669,10 @@ textarea {
 
     .card {
         flex: 1 1 100%;
+    }
+
+    .sorting-container {
+        flex-direction: column-reverse;
     }
 
     .footer-logo {

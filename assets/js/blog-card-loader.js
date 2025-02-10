@@ -2,8 +2,11 @@ import { articles } from '/assets/js/blog-article-data.js';
 
 const articlesContainer = document.getElementById('articles-container');
 const categoriesContainer = document.getElementById('categories-container');
+const sortButton = document.getElementById('sort-recent');  // Sélection du bouton de tri
 
-// Extraire toutes les catégories uniques
+// Variable pour gérer l'ordre de tri
+let sortAscending = false;  // Par défaut, tri décroissant (plus récent)
+
 const categories = [...new Set(articles.flatMap(article => 
     Array.isArray(article.category) ? article.category : [article.category]
 ))];
@@ -44,9 +47,20 @@ function loadArticle(article) {
     });
 }
 
-// Fonction pour afficher les articles (filtre optionnel)
+// Fonction pour trier les articles
+function sortArticles(articlesList) {
+    return articlesList.sort((a, b) => {
+        if (sortAscending) {
+            return new Date(a.date) - new Date(b.date);  // Tri croissant (ancien -> récent)
+        } else {
+            return new Date(b.date) - new Date(a.date);  // Tri décroissant (récent -> ancien)
+        }
+    });
+}
+
+// Fonction pour afficher les articles (filtrage par catégorie et tri)
 function renderArticles(category = null) {
-    articlesContainer.innerHTML = ''; // Vider l'affichage avant de recharger
+    articlesContainer.innerHTML = '';  // Vider l'affichage avant de recharger
 
     const filteredArticles = category 
         ? articles.filter(article => 
@@ -56,7 +70,9 @@ function renderArticles(category = null) {
         ) 
         : articles;
 
-    filteredArticles.forEach(loadArticle);
+    const sortedArticles = sortArticles(filteredArticles);  // Trier les articles selon la date
+
+    sortedArticles.forEach(loadArticle);
 }
 
 // Écouteur d'événement pour filtrer les articles par catégorie
@@ -75,6 +91,13 @@ categoriesContainer.addEventListener("click", (event) => {
             renderArticles(selectedCategory);  // Afficher les articles filtrés
         }
     }
+});
+
+// Écouteur d'événement pour trier les articles
+sortButton.addEventListener("click", () => {
+    sortAscending = !sortAscending;  // Inverser l'ordre de tri à chaque clic
+    sortButton.textContent = sortAscending ? 'Trier par date (Plus ancien)' : 'Trier par date (Plus récent)';
+    renderArticles();  // Recharger les articles avec le nouvel ordre
 });
 
 // Chargement initial des articles (affiche tout par défaut)
