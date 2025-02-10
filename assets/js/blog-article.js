@@ -30,8 +30,26 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("page-title").textContent = `GreenTwins - ${article.title}`;
     document.getElementById("article-title").textContent = article.title;
     document.getElementById("article-description").textContent = article.description;
-    document.getElementById("article-category").textContent = article.category;
-    document.getElementById("article-date").textContent = `Publié le ${article.date}`;
+
+    // 🔹 Gestion des catégories
+    let categoryString = article.category;
+
+    // Si "category" est un tableau, le convertir en une chaîne séparée par des virgules
+    if (Array.isArray(categoryString)) {
+        categoryString = categoryString.join(", "); // Ajouter un espace après chaque virgule
+    } else if (typeof categoryString === "string" && categoryString.includes(",")) {
+        // Si c'est une chaîne avec des virgules, on s'assure que le formatage est correct
+        categoryString = categoryString.split(",").join(", ");
+    }
+
+    document.getElementById("article-category").textContent = categoryString;
+
+    // 🔹 Formatage de la date
+    const formattedDate = new Date(article.date).toLocaleDateString('fr-FR', {
+        year: 'numeric', month: 'long', day: 'numeric'
+    });
+    document.getElementById("article-date").textContent = `Publié le ${formattedDate}`;
+
     document.getElementById("article-image").src = article.image;
     document.getElementById("article-image").alt = article.title;
     document.getElementById("article-content").innerHTML = article.content;
