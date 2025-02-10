@@ -1,14 +1,13 @@
 import { articles } from '/assets/js/blog-article-data.js';
 
 const articlesContainer = document.getElementById('articles-container');
-const categoriesContainer = document.getElementById('categories-container'); // Conteneur pour les boutons de catégories
+const categoriesContainer = document.getElementById('categories-container');
 
-// 🔹 Extraire toutes les catégories uniques (garde celles en tableau)
+// Extraire toutes les catégories uniques
 const categories = [...new Set(articles.flatMap(article => 
     Array.isArray(article.category) ? article.category : [article.category]
 ))];
 
-// 🔹 Générer les boutons de catégories sans casser la mise en page
 categories.forEach(category => {
     const button = document.createElement("button");
     button.textContent = category;
@@ -17,7 +16,7 @@ categories.forEach(category => {
     categoriesContainer.appendChild(button);
 });
 
-// 🔹 Fonction qui charge un article (même structure que ton code original)
+// Fonction qui charge un article
 function loadArticle(article) {
     const articleCard = document.createElement('div');
     articleCard.classList.add('card', 'landing');
@@ -45,7 +44,7 @@ function loadArticle(article) {
     });
 }
 
-// 🔹 Fonction pour afficher les articles (filtre optionnel)
+// Fonction pour afficher les articles (filtre optionnel)
 function renderArticles(category = null) {
     articlesContainer.innerHTML = ''; // Vider l'affichage avant de recharger
 
@@ -60,13 +59,23 @@ function renderArticles(category = null) {
     filteredArticles.forEach(loadArticle);
 }
 
-// 🔹 Écouteur d'événement pour filtrer les articles par catégorie
+// Écouteur d'événement pour filtrer les articles par catégorie
 categoriesContainer.addEventListener("click", (event) => {
     if (event.target.classList.contains("category-button")) {
         const selectedCategory = event.target.dataset.category;
-        renderArticles(selectedCategory);
+        
+        // Si le bouton est déjà actif, on désélectionne (enlève la classe active)
+        if (event.target.classList.contains('active')) {
+            event.target.classList.remove('active');
+            renderArticles();  // Afficher tous les articles
+        } else {
+            // Sinon, on sélectionne ce bouton et on filtre par catégorie
+            document.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active')); // Enlever 'active' des autres boutons
+            event.target.classList.add('active');
+            renderArticles(selectedCategory);  // Afficher les articles filtrés
+        }
     }
 });
 
-// 🔹 Chargement initial des articles (affiche tout par défaut)
+// Chargement initial des articles (affiche tout par défaut)
 document.addEventListener("DOMContentLoaded", () => renderArticles());

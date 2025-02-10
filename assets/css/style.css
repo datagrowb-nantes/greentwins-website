@@ -286,9 +286,31 @@ a:visited {
     cursor: pointer;
 }
 
-.cta-button:hover {
+.category-button {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    transition: 0.25s;
+    font-size: 0.85rem;
+    cursor: pointer;
+    background: #71AC47;
+    color: #fff;
+    border: 2px solid #71AC47;
+    cursor: pointer;
+}
+
+.cta-button:hover,
+.category-button:hover {
     background-color: #fff;
     color: #71AC47;
+}
+
+.category-button.active {
+    background-color: #fff;
+    color: #71AC47;
+    border-color: #71AC47;
 }
 
 /* Header */
@@ -512,7 +534,7 @@ header {
 label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 700;
     color: #262626;
 }
 
@@ -551,6 +573,10 @@ textarea {
 /* Actualites */
 .card-container.article-card {
     flex-grow: 1;
+}
+
+.categories-container {
+    margin: 0 auto 1rem auto;
 }
 
 .article-image {
