@@ -592,6 +592,10 @@ textarea {
 }
 
 /* Actualites */
+.hero.text-container.blog {
+    margin: auto;
+}
+
 .categories-container.card-list {
     gap: 0.5rem;
 }
