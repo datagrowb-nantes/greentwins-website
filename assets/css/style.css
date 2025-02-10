@@ -473,10 +473,6 @@ header {
     flex-wrap: wrap;
 }
 
-.card-list.categories-container {
-    gap: 0.5rem;
-}
-
 .card {
     flex: 1 1 calc(33.33% - 1rem);
     padding: 3vh;
@@ -504,6 +500,8 @@ header {
     min-height: 150px;
     justify-content: center;
 }
+
+
 
 .cards-icon-title {
     text-align: center;
@@ -575,9 +573,16 @@ textarea {
 }
 
 /* Actualites */
+.categories-container.card-list {
+    gap: 0.5rem;
+}
 
 .categories-container {
     margin: 0 auto 1rem auto;
+}
+
+.article-card.card-container {
+    align-items: start;
 }
 
 .article-image {
