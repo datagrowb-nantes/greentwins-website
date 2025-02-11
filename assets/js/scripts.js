@@ -112,6 +112,27 @@ loadHTML('/assets/components/header.html', 'header-section');
 loadHTML('/assets/components/contact.html', 'contact-section');
 loadHTML('/assets/components/footer.html', 'footer-section');
 
+// Récupérer les éléments nécessaires
+const priceToggle = document.getElementById('price-toggle');
+const priceLabel = document.getElementById('price-toggle-label');
+const prices = document.querySelectorAll('.price');
+
+// Mettre à jour les prix en fonction du toggle
+priceToggle.addEventListener('change', function () {
+    const isAnnual = priceToggle.checked;
+
+    // Mettre à jour le texte du label
+    priceLabel.textContent = isAnnual ? 'Mensuel' : 'Annuel';
+
+    // Mettre à jour les prix
+    prices.forEach(function (price) {
+        const monthlyPrice = price.getAttribute('data-monthly');
+        const annualPrice = price.getAttribute('data-annual');
+
+        price.textContent = isAnnual ? annualPrice : monthlyPrice;
+    });
+});
+
 // Initialisation du formulaire de contact
 function initializeContactForm() {
     // Initialisation d'EmailJS

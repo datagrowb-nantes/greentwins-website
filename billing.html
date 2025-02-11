@@ -36,12 +36,21 @@
         </div>
 
         <div class="container gray-bg-4">
+            <div class="toggle-container">
+                <label for="price-toggle">Afficher le prix :</label>
+                <label class="switch">
+                    <input type="checkbox" id="price-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span id="price-toggle-label">Annuel</span>
+            </div>
+
             <div class="card-list">
                 <div class="card landing" data-aos="zoom-in" data-aos-delay="0">
                     <div class="card-container landing">
                         <span class="container-100 text-align-left-to-center">
                             <h1 class="title">BASIC</h1>
-                            <h2 class="green regular bold">29€/mois ou 348€/an</h2>
+                            <h2 class="price" data-monthly="29€/mois" data-annual="348€/an">29€/mois</h2>
                             <hr>
                         </span>
                         <span class="small">
@@ -63,7 +72,7 @@
                     <div class="card-container landing">
                         <span class="container-100 text-align-left-to-center">
                             <h1 class="title blue">ADVANCED</h1>
-                            <h2 class="green regular bold">49€/mois ou 588€/an</h2>
+                            <h2 class="gray regular bold">49€/mois ou 588€/an</h2>
                             <hr>
                         </span>
                         <span class="small">
@@ -85,7 +94,7 @@
                     <div class="card-container landing">
                         <span class="container-100 text-align-left-to-center">
                             <h1 class="title yellow">GOLD</h1>
-                            <h2 class="green regular bold">99€/mois ou 1188€/an</h2>
+                            <h2 class="gray regular bold">99€/mois ou 1188€/an</h2>
                             <hr>
                         </span>
                         <span class="small">
