@@ -213,6 +213,7 @@ a:visited {
 .flex-responsive {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
 }
 
 /* Images */
@@ -302,6 +303,7 @@ button {
     font-size: 0.85rem;
     display: inline-block;
     padding: 12px 28px;
+    border: 2px solid #777B92;
 }
 
 .secondary-button:hover {
