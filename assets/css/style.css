@@ -273,17 +273,21 @@ a:visited {
 }
 
 /* Button */
-.cta-button {
+button {
     font-family: 'Kumbh Sans', sans-serif;
+    transition: 0.25s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button {
     font-weight: 700;
     font-size: 0.85rem;
     display: inline-block;
     padding: 12px 28px;
-    transition: 0.25s;
     background: #71AC47;
     color: #fff;
     border: 2px solid #71AC47;
-    cursor: pointer;
 }
 
 .cta-button:hover {
@@ -292,14 +296,9 @@ a:visited {
 }
 
 .sort-button {
-    font-family: 'Kumbh Sans', sans-serif;
     color: #262626;
     background-color: #fff0;
-    border: none;
-    transition: 0.25s;
     font-size: 0.8rem;
-    cursor: pointer;
-    transition: 0.25s ease;
     text-decoration: underline;
 }
 
@@ -308,28 +307,19 @@ a:visited {
 }
 
 .category-button {
-    font-family: 'Kumbh Sans', sans-serif;
-    border: none;
     padding: 5px 10px;
-    transition: 0.25s;
     font-size: 0.8rem;
-    cursor: pointer;
-    background: #fff;
-    color: #262626;
-    border: 2px solid #71AC47;
-    cursor: pointer;
+    background: #BDC1D3;
+    color: #fff;
     border-radius: 100px;
 }
 
 .category-button:hover {
-    background-color: #71AC47;
-    color: #fff;
+    background-color: #777B92;
 }
 
 .category-button.active {
-    background-color: #71AC47;
-    color: #fff;
-    border-color: #71AC47;
+    background-color: #777B92;
 }
 
 /* Header */
