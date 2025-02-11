@@ -5,7 +5,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Fonts */
+/* Text */
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap');
 
 h1,
@@ -175,6 +175,8 @@ a:visited {
 .gray-bg-4 {
     background-color: #EAEEF7;
 }
+
+/* Container */
 
 .container {
     padding: 2rem;
@@ -615,7 +617,7 @@ textarea {
     color: #c81d46
 }
 
-/* Actualites */
+/* Blog */
 .hero.text-container.blog {
     margin: auto;
 }
@@ -676,55 +678,13 @@ textarea {
 
 
 @media screen and (max-width: 768px) {
+
+    /* Containers */
     .flex-responsive {
         flex-direction: column;
     }
 
-    .hero-container {
-        display: block;
-        height: max-content;
-    }
-
-    .hero-image {
-        max-width: 100%;
-    }
-
-    .hero-image img {
-        min-height: auto;
-    }
-
-    .hero-bottom-section {
-        margin: 0 auto 0;
-    }
-
-    .text-align-left-to-center {
-        text-align: center;
-    }
-
-    .card-list {
-        flex-direction: column;
-    }
-
-    .card-list.categories-container {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .card {
-        flex: 1 1 100%;
-    }
-
-    .sorting-container {
-        flex-direction: column-reverse;
-    }
-
-    .footer-logo {
-        margin: auto;
-    }
-
-    .footer-item-list {
-        gap: 0;
-    }
+    /* Header */
 
     .burger-icon {
         display: inline-block;
@@ -778,6 +738,59 @@ textarea {
     .responsive-flex-reverse-column {
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    /* Hero */
+    .hero-container {
+        display: block;
+        height: max-content;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        min-height: auto;
+    }
+
+    .hero-bottom-section {
+        margin: 0 auto 0;
+    }
+
+    .text-align-left-to-center {
+        text-align: center;
+    }
+
+    /* Cards */
+
+    .card-list {
+        flex-direction: column;
+    }
+
+    .card-list.categories-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    /* Blog */
+
+    .sorting-container {
+        flex-direction: column-reverse;
+    }
+
+    /* Footer */
+
+    .footer-logo {
+        margin: auto;
+    }
+
+    .footer-item-list {
+        gap: 0;
     }
 
 }
