@@ -2,6 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 /* Fonts */
@@ -57,6 +58,10 @@ a:visited {
     text-align: left;
 }
 
+.text-align-left-to-center {
+    text-align: left;
+}
+
 .no-margin-padding {
     margin: 0;
     padding: 0;
@@ -64,6 +69,10 @@ a:visited {
 
 .scroll-x {
     overflow-x: scroll;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /* Colors */
@@ -213,7 +222,18 @@ a:visited {
 .flex-responsive {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+}
+
+.hero-bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
 }
 
 /* Images */
@@ -298,12 +318,11 @@ button {
 
 .secondary-button {
     background-color: #fff0;
-    border-color: #262626;
+    border-color: #fff0;
     font-weight: 700;
     font-size: 0.85rem;
     display: inline-block;
     padding: 12px 28px;
-    border: 2px solid #777B92;
 }
 
 .secondary-button:hover {
@@ -353,7 +372,7 @@ header {
 .nav-menu {
     display: flex;
     position: relative;
-    gap: 20px;
+    gap: 2rem;
 }
 
 .header-logo img {
@@ -674,12 +693,21 @@ textarea {
         min-height: auto;
     }
 
+    .hero-bottom-section {
+        margin: 0 auto 0;
+    }
+
+    .text-align-left-to-center {
+        text-align: center;
+    }
+
     .card-list {
         flex-direction: column;
     }
 
     .card-list.categories-container {
         flex-direction: row;
+        justify-content: center;
     }
 
     .card {
