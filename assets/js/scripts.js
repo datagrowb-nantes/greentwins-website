@@ -121,9 +121,6 @@ const prices = document.querySelectorAll('.price');
 priceToggle.addEventListener('change', function () {
     const isAnnual = priceToggle.checked;
 
-    // Mettre à jour le texte du label
-    priceLabel.textContent = isAnnual ? 'Mensuel' : 'Annuel';
-
     // Mettre à jour les prix
     prices.forEach(function (price) {
         const monthlyPrice = price.getAttribute('data-monthly');

@@ -36,21 +36,25 @@
         </div>
 
         <div class="container gray-bg-4">
-            <div class="toggle-container">
-                <label for="price-toggle">Afficher le prix :</label>
-                <label class="switch">
-                    <input type="checkbox" id="price-toggle">
-                    <span class="slider round"></span>
-                </label>
-                <span id="price-toggle-label">Annuel</span>
+
+            <div class="billing-container">
+                <div id="categories-container" class="categories-container"></div>
+                <div class="toggle-container small">
+                    <p class="bold">Par mois</p>
+                    <label class="switch">
+                        <input type="checkbox" id="price-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <p class="bold">Par an</p>
+                </div>
             </div>
 
             <div class="card-list">
                 <div class="card landing" data-aos="zoom-in" data-aos-delay="0">
                     <div class="card-container landing">
                         <span class="container-100 text-align-left-to-center">
-                            <h1 class="title">BASIC</h1>
-                            <h2 class="price" data-monthly="29€/mois" data-annual="348€/an">29€/mois</h2>
+                            <h1 class="green title">BASIC</h1>
+                            <h2 class="price gray" data-monthly="29 €/mois" data-annual="348 €/an">29 €/mois</h2>
                             <hr>
                         </span>
                         <span class="small">
@@ -72,7 +76,7 @@
                     <div class="card-container landing">
                         <span class="container-100 text-align-left-to-center">
                             <h1 class="title blue">ADVANCED</h1>
-                            <h2 class="gray regular bold">49€/mois ou 588€/an</h2>
+                            <h2 class="price gray" data-monthly="49 €/mois" data-annual="588 €/an">49 €/mois</h2>
                             <hr>
                         </span>
                         <span class="small">
@@ -94,7 +98,7 @@
                     <div class="card-container landing">
                         <span class="container-100 text-align-left-to-center">
                             <h1 class="title yellow">GOLD</h1>
-                            <h2 class="gray regular bold">99€/mois ou 1188€/an</h2>
+                            <h2 class="price gray" data-monthly="99 €/mois" data-annual="1188 €/an">99 €/mois</h2>
                             <hr>
                         </span>
                         <span class="small">
@@ -122,6 +126,7 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script src="/assets/js/scripts.js"></script>
+    <script type="module" src="/assets/js/billing-data.js"></script>
 </body>
 
 </html>
