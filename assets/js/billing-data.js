@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h2 class="price gray">${isAnnual ? plan.annualPrice : plan.monthlyPrice}</h2>
                         <hr>
                     </span>
-                    <span class="small"><p class="bold">Nombre d'utilisateurs</p><p class="gray">${plan.users}</p></span>
-                    <span class="small"><p class="bold">Nombre de sites</p><p class="gray">${plan.sites}</p></span>
-                    <span class="small"><p class="bold">Volume de données</p><p class="gray">${plan.data}</p></span>
+                    <span class="small"><p class="bold">Nombre d'utilisateurs</p><p class="gray text-align-left">${plan.users}</p></span>
+                    <span class="small"><p class="bold">Nombre de sites</p><p class="gray text-align-left">${plan.sites}</p></span>
+                    <span class="small"><p class="bold">Volume de données</p><p class="gray text-align-left">${plan.data}</p></span>
                 </div>
             `;
 
