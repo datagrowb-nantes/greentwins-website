@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         plans[selectedCategory].forEach(plan => {
             const card = document.createElement("div");
-            card.classList.add("card", "landing");
+            card.classList.add("card-billing", "landing");
 
             card.innerHTML = `
                 <div class="card-container landing">
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction de mise à jour avec animation fluide
     function updateCardContents() {
-        const cards = document.querySelectorAll(".card");
+        const cards = document.querySelectorAll(".card-billing");
 
         // Appliquer un fade-out avant la mise à jour des cartes
         cardList.style.transition = "opacity 0.25s ease-in-out";

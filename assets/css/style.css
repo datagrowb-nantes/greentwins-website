@@ -511,7 +511,8 @@ header {
     flex-wrap: wrap;
 }
 
-.card {
+.card,
+.card-billing {
     flex: 1 1 calc(33.33% - 1rem);
     padding: 3vh;
     background: #fff;
