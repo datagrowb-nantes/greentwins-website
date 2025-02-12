@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Données des offres
     const plans = {
         "Smart Building": [
             { cardTitle: "BASIC", colorClass: "green", monthlyPrice: "29 €/mois", annualPrice: "348 €/an", users: "1 utilisateur", sites: "1 site", data: "10 Go" },
@@ -22,17 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     };
 
-    let selectedCategory = "Smart Building"; // Catégorie par défaut
-    let isAnnual = false; // Mode de prix par défaut
+    let selectedCategory = "Smart Building";
+    let isAnnual = false;
 
-    // Récupération des catégories uniques
     const articles = [
         { id: 1, category: "Smart Building" },
         { id: 2, category: "Méthanisation" },
     ];
     const categories = [...new Set(articles.map(article => article.category))];
 
-    // Création des boutons de catégorie
     categories.forEach(category => {
         const button = document.createElement("button");
         button.textContent = category;
@@ -42,9 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
         categoriesContainer.appendChild(button);
     });
 
-    // Initialisation des cartes
     function initializeCards() {
-        cardList.innerHTML = ""; // Vider les cartes existantes
+        cardList.innerHTML = "";
 
         plans[selectedCategory].forEach(plan => {
             const card = document.createElement("div");
@@ -57,56 +53,49 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h2 class="price gray">${isAnnual ? plan.annualPrice : plan.monthlyPrice}</h2>
                         <hr>
                     </span>
-                    <span class="small"><p class="bold">Nombre d'utilisateurs</p><p class="gray text-align-left">${plan.users}</p></span>
-                    <span class="small"><p class="bold">Nombre de sites</p><p class="gray text-align-left">${plan.sites}</p></span>
-                    <span class="small"><p class="bold">Volume de données</p><p class="gray text-align-left">${plan.data}</p></span>
+                    <span class="small detail"><p class="bold">Nombre d'utilisateurs</p><p class="gray text-align-left">${plan.users}</p></span>
+                    <span class="small detail"><p class="bold">Nombre de sites</p><p class="gray text-align-left">${plan.sites}</p></span>
+                    <span class="small detail"><p class="bold">Volume de données</p><p class="gray text-align-left">${plan.data}</p></span>
                 </div>
             `;
 
             cardList.appendChild(card);
         });
-
-        // Animation fade-in au chargement
-        cardList.style.opacity = "0"; // Initialiser à 0
-        setTimeout(() => {
-            cardList.style.transition = "opacity 0.5s ease-in-out"; // Transition plus douce
-            cardList.style.opacity = "1"; // Réafficher avec opacité 1
-        }, 50); // Légère temporisation avant d'ajouter la transition
     }
 
-    initializeCards(); // Charger les cartes au démarrage
+    initializeCards();
 
-    // Fonction de mise à jour avec animation fluide
     function updateCardContents() {
         const cards = document.querySelectorAll(".card-billing");
 
-        // Appliquer un fade-out avant la mise à jour des cartes
-        cardList.style.transition = "opacity 0.25s ease-in-out";
-        cardList.style.opacity = "0"; // Faire disparaître les cartes avant la mise à jour
+        cards.forEach((card, index) => {
+            const price = card.querySelector(".price");
+            const details = card.querySelectorAll(".detail p.gray");
 
-        setTimeout(() => {
-            cards.forEach((card, index) => {
-                const cardTitle = card.querySelector(".cardTitle");
-                const price = card.querySelector(".price");
-                const details = card.querySelectorAll(".small p.gray");
+            price.style.transition = "opacity 0.25s ease-in-out";
+            details.forEach(detail => {
+                detail.style.transition = "opacity 0.25s ease-in-out";
+            });
 
+            price.style.opacity = "0";
+            details.forEach(detail => (detail.style.opacity = "0"));
+
+            setTimeout(() => {
                 const plan = plans[selectedCategory][index];
 
                 if (plan) {
-                    cardTitle.textContent = plan.cardTitle;
                     price.textContent = isAnnual ? plan.annualPrice : plan.monthlyPrice;
                     details[0].textContent = plan.users;
                     details[1].textContent = plan.sites;
                     details[2].textContent = plan.data;
                 }
-            });
 
-            // Appliquer un fade-in après la mise à jour
-            cardList.style.opacity = "1"; // Réafficher les cartes avec opacité 1
-        }, 300); // Temps pour laisser le fade-out se produire et réafficher les cartes
+                price.style.opacity = "1";
+                details.forEach(detail => (detail.style.opacity = "1"));
+            }, 300);
+        });
     }
 
-    // Gestion du changement de catégorie
     categoriesContainer.addEventListener("click", (event) => {
         if (event.target.classList.contains("category-button")) {
             selectedCategory = event.target.dataset.category;
@@ -116,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Gestion du switch de prix
     priceToggle.addEventListener("change", () => {
         isAnnual = priceToggle.checked;
         updateCardContents();
