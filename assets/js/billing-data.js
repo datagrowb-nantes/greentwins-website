@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Données des offres
     const plans = {
         "Smart Building": [
-            { title: "BASIC", colorClass: "green", monthlyPrice: "29 €/mois", annualPrice: "348 €/an", users: "1 utilisateur", sites: "1 site", data: "10 Go" },
-            { title: "ADVANCED", colorClass: "blue", monthlyPrice: "49 €/mois", annualPrice: "588 €/an", users: "3 utilisateurs", sites: "3 sites", data: "20 Go" },
-            { title: "GOLD", colorClass: "yellow", monthlyPrice: "99 €/mois", annualPrice: "1188 €/an", users: "Illimité", sites: "Illimité", data: "Illimité" }
+            { cardTitle: "BASIC", colorClass: "green", monthlyPrice: "29 €/mois", annualPrice: "348 €/an", users: "1 utilisateur", sites: "1 site", data: "10 Go" },
+            { cardTitle: "ADVANCED", colorClass: "blue", monthlyPrice: "49 €/mois", annualPrice: "588 €/an", users: "3 utilisateurs", sites: "3 sites", data: "20 Go" },
+            { cardTitle: "GOLD", colorClass: "yellow", monthlyPrice: "99 €/mois", annualPrice: "1188 €/an", users: "Illimité", sites: "Illimité", data: "Illimité" }
         ],
         "Méthanisation": [
-            { title: "BASIC", colorClass: "green", monthlyPrice: "39 €/mois", annualPrice: "468 €/an", users: "1 utilisateur", sites: "1 site", data: "15 Go" },
-            { title: "ADVANCED", colorClass: "blue", monthlyPrice: "59 €/mois", annualPrice: "708 €/an", users: "3 utilisateurs", sites: "3 sites", data: "30 Go" },
-            { title: "GOLD", colorClass: "yellow", monthlyPrice: "109 €/mois", annualPrice: "1308 €/an", users: "Illimité", sites: "Illimité", data: "Illimité" }
+            { cardTitle: "BASIC", colorClass: "green", monthlyPrice: "39 €/mois", annualPrice: "468 €/an", users: "1 utilisateur", sites: "1 site", data: "15 Go" },
+            { cardTitle: "ADVANCED", colorClass: "blue", monthlyPrice: "59 €/mois", annualPrice: "708 €/an", users: "3 utilisateurs", sites: "3 sites", data: "30 Go" },
+            { cardTitle: "GOLD", colorClass: "yellow", monthlyPrice: "109 €/mois", annualPrice: "1308 €/an", users: "Illimité", sites: "Illimité", data: "Illimité" }
         ]
     };
 
@@ -26,6 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let isAnnual = false; // Mode de prix par défaut
 
     // Récupération des catégories uniques
+    const articles = [
+        { id: 1, category: "Smart Building" },
+        { id: 2, category: "Méthanisation" },
+    ];
     const categories = [...new Set(articles.map(article => article.category))];
 
     // Création des boutons de catégorie
@@ -49,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             card.innerHTML = `
                 <div class="card-container landing">
                     <span class="container-100 text-align-left-to-center">
-                        <h1 class="${plan.colorClass} title">${plan.title}</h1>
+                        <h1 class="${plan.colorClass} cardTitle">${plan.cardTitle}</h1>
                         <h2 class="price gray">${isAnnual ? plan.annualPrice : plan.monthlyPrice}</h2>
                         <hr>
                     </span>
@@ -63,11 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Animation fade-in au chargement
-        cardList.style.opacity = "0";
+        cardList.style.opacity = "0"; // Initialiser à 0
         setTimeout(() => {
-            cardList.style.transition = "opacity 0.25s ease-in-out";
-            cardList.style.opacity = "1";
-        }, 50);
+            cardList.style.transition = "opacity 0.5s ease-in-out"; // Transition plus douce
+            cardList.style.opacity = "1"; // Réafficher avec opacité 1
+        }, 50); // Légère temporisation avant d'ajouter la transition
     }
 
     initializeCards(); // Charger les cartes au démarrage
@@ -76,36 +80,32 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateCardContents() {
         const cards = document.querySelectorAll(".card");
 
-        cards.forEach((card, index) => {
-            const title = card.querySelector(".title");
-            const price = card.querySelector(".price");
-            const details = card.querySelectorAll(".small p.gray");
+        // Appliquer un fade-out avant la mise à jour des cartes
+        cardList.style.transition = "opacity 0.25s ease-in-out";
+        cardList.style.opacity = "0"; // Faire disparaître les cartes avant la mise à jour
 
-            // Appliquer un fade-out sur le texte uniquement
-            title.style.transition = price.style.transition = "opacity 0.25s ease-in-out";
-            details.forEach(el => el.style.transition = "opacity 0.25s ease-in-out");
+        setTimeout(() => {
+            cards.forEach((card, index) => {
+                const cardTitle = card.querySelector(".cardTitle");
+                const price = card.querySelector(".price");
+                const details = card.querySelectorAll(".small p.gray");
 
-            title.style.opacity = "0";
-            price.style.opacity = "0";
-            details.forEach(el => el.style.opacity = "0");
-
-            setTimeout(() => {
                 const plan = plans[selectedCategory][index];
+
                 if (plan) {
-                    title.textContent = plan.title;
+                    cardTitle.textContent = plan.cardTitle;
                     price.textContent = isAnnual ? plan.annualPrice : plan.monthlyPrice;
                     details[0].textContent = plan.users;
                     details[1].textContent = plan.sites;
                     details[2].textContent = plan.data;
                 }
+            });
 
-                // Appliquer le fade-in après modification
-                title.style.opacity = "1";
-                price.style.opacity = "1";
-                details.forEach(el => el.style.opacity = "1");
-            }, 250); // Attendre la fin du fade-out avant de changer le texte
-        });
+            // Appliquer un fade-in après la mise à jour
+            cardList.style.opacity = "1"; // Réafficher les cartes avec opacité 1
+        }, 300); // Temps pour laisser le fade-out se produire et réafficher les cartes
     }
+
     // Gestion du changement de catégorie
     categoriesContainer.addEventListener("click", (event) => {
         if (event.target.classList.contains("category-button")) {
@@ -122,8 +122,3 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCardContents();
     });
 });
-
-export const articles = [
-    { id: 1, category: "Smart Building" },
-    { id: 2, category: "Méthanisation" },
-];
