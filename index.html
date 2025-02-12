@@ -44,7 +44,7 @@
                             <button class="underline secondary-button">Devenir client</button>
                         </a>
                     </div>
-                    <p class='small text-align-left-to-center'>Essai gratuit de 30 jours</p>
+                    <p class='green bold small text-align-left-to-center'>Essai gratuit de 30 jours</p>
                 </div>
 
             </div>
@@ -182,15 +182,42 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="hero-container">
+                    <div class="hero text-container container-720 centered-div">
+                        <h1>Nos tarifs</h1>
+                        <p class="gray">Une solution sur mesure, un tarif transparent pour chaque innovation, à sa juste
+                            valeur.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="billing-container">
+                    <div id="categories-container" class="categories-container"></div>
+                    <div class="toggle-container small">
+                        <p class="bold">Par mois</p>
+                        <label class="switch">
+                            <input type="checkbox" id="price-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <p class="bold">Par an</p>
+                    </div>
+                </div>
+
+                <div class="card-list-billing"></div>
+            </div>
+
     </section>
 
     <div id="contact-section"></div>
-
     <div id="footer-section"></div>
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script type="module" src="/assets/js/billing-data.js"></script>
 </body>
 
 </html>

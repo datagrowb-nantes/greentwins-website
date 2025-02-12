@@ -497,7 +497,8 @@ header {
 }
 
 /* Cards */
-.card-list {
+.card-list,
+.card-list-billing {
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -820,7 +821,8 @@ input:checked+.slider:before {
 
     /* Cards */
 
-    .card-list {
+    .card-list,
+    .card-list-billing {
         flex-direction: column;
     }
 
@@ -832,6 +834,7 @@ input:checked+.slider:before {
     .card {
         flex: 1 1 100%;
     }
+
 
     /* Blog */
 

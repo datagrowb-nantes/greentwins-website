@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const categoriesContainer = document.getElementById('categories-container');
-    const cardList = document.querySelector(".card-list");
+    const cardList = document.querySelector(".card-list-billing");
     const priceToggle = document.getElementById("price-toggle");
 
     if (!categoriesContainer || !cardList || !priceToggle) {
