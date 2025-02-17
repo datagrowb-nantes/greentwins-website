@@ -8,18 +8,18 @@ const data = [
                 sousRubrique: "Sites",
                 descriptionSousRubrique: "Gestion de la structure globale et des sites individuels",
                 details: [
-                    "• Ajouter de nouveaux sites",
-                    "• Gérer les sites",
-                    "• Supprimer les informations des sites renseignés"
+                    ["Ajouter de nouveaux sites", "Créez un site et configurez les paramètres spécifiques."],
+                    ["Gérer les sites", "Accédez à la gestion des sites existants."],
+                    ["Supprimer les informations des sites renseignés", "Supprimez les sites qui ne sont plus nécessaires."]
                 ]
             },
             {
                 sousRubrique: "Entités fonctionnelles",
                 descriptionSousRubrique: "Vue des données en vue tableau et en vue schéma",
                 details: [
-                    "• Ajouter des entités fonctionnelles",
-                    "• Modifier les entités fonctionnelles existantes",
-                    "• Supprimer les informations des entités fonctionnelles renseignées"
+                    ["Ajouter des entités fonctionnelles", "Créez et gérez les entités fonctionnelles."],
+                    ["Modifier les entités fonctionnelles existantes", "Modifiez les paramètres des entités existantes."],
+                    ["Supprimer les informations des entités fonctionnelles renseignées", "Supprimez des entités fonctionnelles obsolètes."]
                 ]
             }
         ]
@@ -32,28 +32,28 @@ const data = [
                 sousRubrique: "Utilisateurs",
                 descriptionSousRubrique: "Gestion des utilisateurs actifs et invités",
                 details: [
-                    "• Ajouter de nouveaux collaborateurs",
-                    "• Supprimer l'accès des utilisateurs à GreenTwins"
+                    ["Ajouter de nouveaux collaborateurs", "Créez des utilisateurs dans le système."],
+                    ["Supprimer l'accès des utilisateurs à GreenTwins", "Révoquez l'accès des utilisateurs à la plateforme."]
                 ]
             },
             {
                 sousRubrique: "Équipes",
                 descriptionSousRubrique: "Gestion des équipes et des accès aux fonctionnalités",
                 details: [
-                    "• Créer des équipes",
-                    "• Associer les utilisateurs à des équipes",
-                    "• Modifier les informations des équipes",
-                    "• Supprimer les équipes créées"
+                    ["Créer des équipes", "Créez des équipes et gérez leur composition."],
+                    ["Associer les utilisateurs à des équipes", "Attribution des membres aux équipes correspondantes."],
+                    ["Modifier les informations des équipes", "Mettez à jour les informations des équipes existantes."],
+                    ["Supprimer les équipes créées", "Supprimez des équipes lorsque cela est nécessaire."]
                 ]
             },
             {
                 sousRubrique: "Profils",
                 descriptionSousRubrique: "Gestion des profils des utilisateurs",
                 details: [
-                    "• Ajouter de nouveaux profils",
-                    "• Associer les utilisateurs aux profils",
-                    "• Modifier les profils",
-                    "• Supprimer des profils"
+                    ["Ajouter de nouveaux profils", "Ajoutez des profils pour les nouveaux utilisateurs."],
+                    ["Associer les utilisateurs aux profils", "Liez les utilisateurs à leur profil spécifique."],
+                    ["Modifier les profils", "Mettez à jour les informations des profils."],
+                    ["Supprimer des profils", "Supprimez les profils inutiles."]
                 ]
             }
         ]
@@ -66,27 +66,42 @@ const data = [
                 sousRubrique: "Data Storage",
                 descriptionSousRubrique: "Affichage des sites, vue d'ensemble de chaque site, trois types de définition du type de stockage, vue des données stockées",
                 details: [
-                    "• Ajouter de nouveaux profils",
-                    "• Modifier les informations des profils",
-                    "• Gérer l'accès aux fonctionnalités des utilisateurs",
-                    "• Supprimer les profils créés"
+                    ["Ajouter de nouveaux profils", "Créez de nouveaux profils de stockage."],
+                    ["Modifier les informations des profils", "Mettez à jour les informations sur les profils de stockage."],
+                    ["Gérer l'accès aux fonctionnalités des utilisateurs", "Définissez des permissions pour les utilisateurs."],
+                    ["Supprimer les profils créés", "Supprimez les profils de stockage obsolètes."]
                 ]
             },
             {
                 sousRubrique: "Data Source",
                 descriptionSousRubrique: "Vue des données en vue tableau et en vue schéma",
                 details: [
-                    "• Visualiser la base de données en vue tableau",
-                    "• Voir la base de données en vue schéma"
+                    ["Visualiser la base de données en vue tableau", "Consultez les données sous forme de tableau."],
+                    ["Voir la base de données en vue schéma", "Affichez les données sous forme graphique."]
                 ]
             },
             {
                 sousRubrique: "Data Dictionnary",
                 descriptionSousRubrique: "Affichage, modification et export du dictionnaire des données",
                 details: [
-                    "• Afficher le dictionnaire des données",
-                    "• Modifier le dictionnaire des données",
-                    "• Exporter le dictionnaire des données"
+                    ["Afficher le dictionnaire des données", "Consultez le dictionnaire des données."],
+                    ["Modifier le dictionnaire des données", "Mettez à jour le dictionnaire des données."],
+                    ["Exporter le dictionnaire des données", "Exportez le dictionnaire pour d'autres usages."]
+                ]
+            },
+            {
+                sousRubrique: "Data Quality",
+                descriptionSousRubrique: "Affichage du dashboard de qualité des données",
+                details: [
+                    ["Visualiser les graphiques de qualité des données", "Analysez en un coup d'œil la conformité et l'exactitude des données stockées."]
+                ]
+            },
+            {
+                sousRubrique: "Data Alerts",
+                descriptionSousRubrique: "Affichage des alertes sur la qualité des données",
+                details: [
+                    ["Afficher les alertes sur la qualité des données", "Consultez les notifications signalant des incohérences ou des erreurs détectées."],
+                    ["Vérifier les seuils de fiabilité des données", "Assurez-vous que les données respectent les critères de précision et de cohérence."]
                 ]
             }
         ]
@@ -104,7 +119,7 @@ function generateTabsAndContent() {
         const tab = document.createElement('li');
         tab.textContent = rubrique.rubrique;
         tab.setAttribute('data-index', index);
-        tab.classList.add('tab'); // Ajouter la classe pour le style
+        tab.classList.add('category-button');
         tab.addEventListener('click', () => showContent(index));
 
         tabsContainer.appendChild(tab);
@@ -115,9 +130,9 @@ function generateTabsAndContent() {
         rubriqueDiv.setAttribute('data-index', index);
         rubriqueDiv.style.display = 'none'; // Masquer par défaut
 
-        const title = document.createElement('h2');
-        title.textContent = rubrique.rubrique;
-        rubriqueDiv.appendChild(title);
+        // const title = document.createElement('h2');
+        // title.textContent = rubrique.rubrique;
+        // rubriqueDiv.appendChild(title);
 
         const desc = document.createElement('p');
         desc.textContent = rubrique.desc;
@@ -134,16 +149,23 @@ function generateTabsAndContent() {
 
             const sousRubriqueDesc = document.createElement('p');
             sousRubriqueDesc.textContent = sousRubrique.descriptionSousRubrique;
+            sousRubriqueDesc.classList.add('green');
             sousRubriqueDiv.appendChild(sousRubriqueDesc);
 
-            const detailsList = document.createElement('ul');
+            // Affichage des détails sous forme de tableau
+            const detailsTable = document.createElement('table');
+            detailsTable.classList.add('small');
             sousRubrique.details.forEach(detail => {
-                const listItem = document.createElement('li');
-                listItem.textContent = detail;
-                detailsList.appendChild(listItem);
+                const row = document.createElement('tr');
+                detail.forEach(cell => {
+                    const cellElement = document.createElement('td');
+                    cellElement.textContent = cell;
+                    row.appendChild(cellElement);
+                });
+                detailsTable.appendChild(row);
             });
 
-            sousRubriqueDiv.appendChild(detailsList);
+            sousRubriqueDiv.appendChild(detailsTable);
             rubriqueDiv.appendChild(sousRubriqueDiv);
         });
 
@@ -156,7 +178,7 @@ function generateTabsAndContent() {
 
 // Fonction pour afficher le contenu de la rubrique sélectionnée
 function showContent(index) {
-    const allTabs = document.querySelectorAll('.tab');
+    const allTabs = document.querySelectorAll('.category-button');
     const allRubriques = document.querySelectorAll('.rubrique-content');
 
     // Masquer toutes les rubriques
@@ -164,7 +186,7 @@ function showContent(index) {
     allTabs.forEach(tab => tab.classList.remove('active'));
 
     // Afficher la rubrique sélectionnée
-    allRubriques[index].style.display = 'block';
+    allRubriques[index].style.display = 'flex';
     allTabs[index].classList.add('active');
 }
 
