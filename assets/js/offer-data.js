@@ -104,6 +104,86 @@ const data = [
                 ]
             }
         ]
+    },
+    {
+        rubrique: "Métier",
+        desc: "Les rapports couvrent différents domaines : audits et réglementations, gestion et planification, énergie et environnement, finance, et sobriété numérique.",
+        sousRubriques: [
+            {
+                sousRubrique: "Rapports Audits & Réglementations",
+                descriptionSousRubrique: "Gestion des rapports liés à l'audit et aux règlementations",
+                details: [
+                    "Générer, exporter, partager, supprimer les rapports liés à l'audit et aux règlementations"
+                ]
+            },
+            {
+                sousRubrique: "Gestion & Planification",
+                descriptionSousRubrique: "Gestion des rapports associés à la gestion et à la planification",
+                details: [
+                    "Générer, exporter, partager, supprimer les rapports associés à la gestion et à la planification"
+                ]
+            },
+            {
+                sousRubrique: "Énergie & Environnement",
+                descriptionSousRubrique: "Gestion des rapports liés à l'énergie et l'environnement",
+                details: [
+                    "Générer, exporter, partager, supprimer les rapports liés à l'énergie et l'environnement"
+                ]
+            },
+            {
+                sousRubrique: "Finance",
+                descriptionSousRubrique: "Gestion des rapports de finance",
+                details: [
+                    "Générer, exporter, partager, supprimer les rapports de finance"
+                ]
+            },
+            {
+                sousRubrique: "Sobriété numérique",
+                descriptionSousRubrique: "Gestion des rapports en relation avec la sobriété énergétique",
+                details: [
+                    "Générer, exporter, partager, supprimer les rapports en relation avec la sobriété énergétique"
+                ]
+            }
+        ]
+    },
+    {
+        rubrique: "Dashboard",
+        desc: "Gestion et suivi des tableaux de bord pour une visualisation des données.",
+        sousRubriques: [
+            {
+                sousRubrique: "Tableaux de bord",
+                descriptionSousRubrique: "Visualisation en un coup d'œil de l'activité de vos différents sites",
+                details: [
+                    "Voir les différentes consommations et utilisation de données de vos sites"
+                ]
+            }
+        ]
+    },
+    {
+        rubrique: "Digital Twins",
+        desc: "Créez, suivez et optimisez des représentations virtuelles d’entités physiques pour une meilleure analyse, simulation et prise de décision.",
+        sousRubriques: [
+            {
+                sousRubrique: "Jumeaux numériques",
+                descriptionSousRubrique: "Gestion des jumeaux numériques",
+                details: [
+                    "Voir et interagir avec les jumeaux numériques en 3D"
+                ]
+            }
+        ]
+    },
+    {
+        rubrique: "ByIA",
+        desc: "Les modèles d’intelligence artificielle vous permettront d’optimiser les données, l’efficacité opérationnelle et la prise de décision.",
+        sousRubriques: [
+            {
+                sousRubrique: "Modèles IA",
+                descriptionSousRubrique: "Prédiction par modèle d'IA",
+                details: [
+                    "Générer des analyses prédictives par IA"
+                ]
+            }
+        ]
     }
 ];
 
@@ -131,6 +211,7 @@ function generateTabsAndContent() {
 
         const desc = document.createElement('p');
         desc.textContent = rubrique.desc;
+        desc.classList.add('gray');
         rubriqueDiv.appendChild(desc);
 
         // Créer le contenu des sous-rubriques
