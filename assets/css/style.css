@@ -767,6 +767,12 @@ input:checked+.slider:before {
     max-width: 1024px;
 }
 
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .sous-rubrique {
     padding: 1vh;
     border-collapse: collapse;
