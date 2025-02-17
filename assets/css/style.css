@@ -738,6 +738,33 @@ input:checked+.slider:before {
     /* Ajustement du déplacement */
 }
 
+/* Offer */
+/* Exemple de style de base */
+#tabs {
+    list-style-type: none;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+}
+
+.tab.active {
+    font-weight: bold;
+    color: #FF6F00;
+}
+
+.rubrique-content {
+    display: none;
+    /* Par défaut, masqué */
+}
+
+.rubrique-content.active {
+    display: block;
+    /* Affiché quand l'onglet est sélectionné */
+}
+
 @media screen and (max-width: 768px) {
 
     /* Containers */
