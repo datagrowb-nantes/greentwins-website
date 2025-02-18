@@ -493,6 +493,53 @@ header {
     opacity: 1;
 }
 
+/* Carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: opacity 0s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.carousel-slide.active {
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.carousel-nav button {
+    margin: 1rem;
+    background-color: #fffa;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 /* Footer */
 #footer {
     background-color: #777B92;
