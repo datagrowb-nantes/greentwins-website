@@ -24,14 +24,12 @@
             left: 0;
             opacity: 0;
             z-index: 1;
-            /* Assure-toi que les slides soient derrière les boutons */
         }
 
         .carousel-slide.active {
             position: relative;
             opacity: 1;
             z-index: 2;
-            /* La slide active sera devant */
         }
 
         .carousel-nav {
@@ -42,15 +40,16 @@
             width: 100%;
             transform: translateY(-50%);
             z-index: 3;
-            /* Assure-toi que les boutons soient devant tout */
         }
 
         .carousel-nav button {
-            background: none;
+            margin: 1rem;
+            background-color: #fffa;
             border: none;
             font-size: 24px;
             cursor: pointer;
             padding: 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -139,35 +138,28 @@
         </div>
 
         <div class="carousel-nav">
-            <button id="prev">&lt;</button>
-            <button id="next">&gt;</button>
+            <button id="prev">←</button>
+            <button id="next">→</button>
         </div>
 
-        <div class="carousel-indicators">
-            <!-- Ces indicateurs seront ajoutés dynamiquement par JS -->
-        </div>
     </div>
 
     <script>
         const slides = document.querySelectorAll('.carousel-slide');
-        const indicatorsContainer = document.querySelector('.carousel-indicators');
         const totalSlides = slides.length;
         let currentSlide = 0;
-
-        // Fonction d'initialisation des indicateurs
-        function createIndicators() {
-            for (let i = 0; i < totalSlides; i++) {
-                const indicator = document.createElement('span');
-                indicator.addEventListener('click', () => changeSlide(i));
-                indicatorsContainer.appendChild(indicator);
-            }
-        }
 
         // Fonction de changement de slide
         function changeSlide(index) {
             if (index < 0) index = totalSlides - 1;
             if (index >= totalSlides) index = 0;
+
+            // Supprimer la classe 'active' de la slide actuelle
+            slides[currentSlide].classList.remove('active');
+
+            // Ajouter la classe 'active' à la nouvelle slide
             currentSlide = index;
+            slides[currentSlide].classList.add('active');
         }
 
         // Event Listeners pour les boutons de navigation
@@ -179,9 +171,7 @@
         });
 
         // Initialisation
-        createIndicators();
         changeSlide(currentSlide); // Commencer avec la première slide
-
     </script>
 
 </body>
