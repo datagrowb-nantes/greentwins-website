@@ -109,6 +109,7 @@ function loadHTML(file, elementId) {
 }
 
 loadHTML('/assets/components/header.html', 'header-section');
+loadHTML('/assets/components/carrousel.html', 'carrousel-section');
 loadHTML('/assets/components/contact.html', 'contact-section');
 loadHTML('/assets/components/footer.html', 'footer-section');
 
