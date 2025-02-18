@@ -49,10 +49,10 @@ const data = [
                 sousRubrique: "Profils",
                 descriptionSousRubrique: "Gestion des profils des utilisateurs",
                 details: [
-                    "Ajouter de nouveaux profils",
-                    "Associer les utilisateurs aux profils",
-                    "Modifier les profils",
-                    "Supprimer des profils"
+                    "Vue d'ensemble de l'entreprise",
+                    "Vue d'ensemble des sites",
+                    "Choisir un type de stockage (Import des fichiers, FTP, Azure Cloud-Greentwins)",
+                    "Voir une image des données stockées"
                 ]
             }
         ]
